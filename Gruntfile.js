@@ -9,13 +9,43 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 
 		// configurable paths
-		paths: {
+		path: {
 			app:  'app',
 			dist: 'dist'
+		},
+		clean: {
+			dist: ['<%= path.dist %>']
+		},
+		jshint: {
+
+		},
+		cssmin: {
+
+		}
+		uglify: {
+
+		},
+		copy {
+
+		},
+		modernizr {
+
+		},
+		replace {
+
 		}
 
 	});
 
-	grunt.registerTask('default', [
+	grunt.registerTask('build', [
+		'clean',
+		'jshint',
+		'cssmin',
+		'uglify',
+		'copy',
+		'modernizr',
+		'replace'
 	]);
+
+	grunt.registerTask('default', ['build']);
 };
