@@ -16,22 +16,38 @@ module.exports = function (grunt) {
 		clean: {
 			dist: ['<%= path.dist %>']
 		},
-		jshint: {
+		imagemin: {
+			dist: {
+				files: [{
+					expand: true,
+					cwd:  '<%= path.app %>/images',
+					src:  '{,*/}*.{gif,jpeg,jpg,png}',
+					dest: '<%= path.dist %>/images'
+				}]
+			}
+		},
+		coffee: {
 
+		},
+		jshint: {
+			options: {
+				jshintrc: '.jshintrc',
+				reporter: require('jshint-stylish')
+			}
 		},
 		cssmin: {
 
-		}
+		},
 		uglify: {
 
 		},
-		copy {
+		copy: {
 
 		},
-		modernizr {
+		modernizr: {
 
 		},
-		replace {
+		replace: {
 
 		}
 
@@ -39,6 +55,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', [
 		'clean',
+		'imagemin',
 		'jshint',
 		'cssmin',
 		'uglify',
