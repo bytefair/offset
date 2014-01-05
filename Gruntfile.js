@@ -8,21 +8,24 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 
-		// configurable paths
-		path: {
+		// configurable offsets
+		offset: {
+			// directory defs
 			app:  'app',
-			dist: 'dist'
+			dist: 'dist',
+			// additional settings
+			csspre: 'sass' // or 'less' if you like being wrong
 		},
 		clean: {
-			dist: ['<%= path.dist %>']
+			dist: ['<%= offset.dist %>']
 		},
 		imagemin: {
 			dist: {
 				files: [{
 					expand: true,
-					cwd:  '<%= path.app %>/images',
+					cwd:  '<%= offset.app %>/images',
 					src:  '{,*/}*.{gif,jpeg,jpg,png}',
-					dest: '<%= path.dist %>/images'
+					dest: '<%= offset.dist %>/images'
 				}]
 			}
 		},
