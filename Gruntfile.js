@@ -66,7 +66,8 @@ module.exports = function (grunt) {
 				expand: true,
 				cwd: '<%= offset.app %>',
 				src: [
-					'**/*.{php,txt,md}'
+					'**/*.{php,txt,md}',
+					'screenshot.png'
 				],
 				dest: '<%= offset.dist %>'
 			},
