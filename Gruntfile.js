@@ -13,8 +13,6 @@ module.exports = function (grunt) {
 			// directory defs
 			app:  'app',
 			dist: 'dist',
-			// additional settings
-			csspre: 'sass' // or 'less' if you like being wrong
 		},
 		clean: {
 			dist: ['<%= offset.dist %>']
