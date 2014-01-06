@@ -83,6 +83,24 @@ module.exports = function (grunt) {
 
 	});
 
+	grunt.registerTask('bower-install', function() {
+		var exec = require('child_process').exec;
+		var cb = this.async();
+		exec('bower install', function(err, stdout, stderr) {
+			console.log(stdout);
+			cb();
+		});
+	});
+
+	grunt.registerTask('npm-install', function() {
+		var exec = require('child_process').exec;
+		var cb = this.async();
+		exec('npm install', function(err, stdout, stderr) {
+			console.log(stdout);
+			cb();
+		});
+	});
+
 	grunt.registerTask('build', [
 		'clean:dist',
 		'imagemin',
@@ -93,6 +111,11 @@ module.exports = function (grunt) {
 		'copy',
 		'modernizr',
 		'clean:build'
+	]);
+
+	grunt.registerTask('install', [
+		'npm-install',
+		'bower-install'
 	]);
 
 	grunt.registerTask('default', ['build']);
