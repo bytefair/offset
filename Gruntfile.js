@@ -28,9 +28,6 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-		coffee: {
-			// will add support for coffee later
-		},
 		jshint: {
 			dist: {
 				options: {
@@ -70,15 +67,7 @@ module.exports = function (grunt) {
 					'screenshot.png'
 				],
 				dest: '<%= offset.dist %>'
-			},
-			// bowerjs: {
-			// 	expand: true,
-			// 	cwd: 'bower_components',
-			// 	src: [
-			// 		'modernizr/modernizr.js'
-			// 	],
-			// 	dest: '<%= offset.dist %>/js'
-			// }
+			}
 		},
 		modernizr: {
 			devFile: 'bower_components/modernizr/modernizr.js',
@@ -86,9 +75,6 @@ module.exports = function (grunt) {
 			files: [
 				'app/**/*'
 			]
-		},
-		replace: {
-			// not yet
 		}
 
 	});
