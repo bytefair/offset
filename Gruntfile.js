@@ -70,7 +70,7 @@ module.exports = function (grunt) {
 			},
 			license: {
 				src:  'LICENSE.txt',
-				dest: '<%= offset.dist %>'
+				dest: '<%= offset.dist %>/LICENSE.txt'
 			}
 		},
 		modernizr: {
