@@ -28,28 +28,65 @@ module.exports = function (grunt) {
 			}
 		},
 		coffee: {
-
+			// will add support for coffee later
 		},
 		jshint: {
-			options: {
-				jshintrc: '.jshintrc',
-				reporter: require('jshint-stylish')
+			dist: {
+				options: {
+					jshintrc: '.jshintrc',
+					reporter: require('jshint-stylish')
+				}
+			}
+		},
+		sass: {
+			dist: {
+				files: {
+					'<%= offset.dist %>/style.css': '<%= offset.app %>/style.scss'
+				}
 			}
 		},
 		cssmin: {
-
+			dist: {
+				files: {
+					'<%= offset.dist %>/style.css': '<%= offset.dist %>/style.css'
+				}
+			}
 		},
 		uglify: {
-
+			dist: {
+				expand: true,
+				cwd: '<%= offset.app %>/js',
+				src: '**/*.js',
+				dest: '<%= offset.dist %>/js'
+			}
 		},
 		copy: {
-
+			templates: {
+				expand: true,
+				cwd: '<%= offset.app %>',
+				src: [
+					'**/*.{php,txt,md}'
+				],
+				dest: '<%= offset.dist %>'
+			},
+			// bowerjs: {
+			// 	expand: true,
+			// 	cwd: 'bower_components',
+			// 	src: [
+			// 		'modernizr/modernizr.js'
+			// 	],
+			// 	dest: '<%= offset.dist %>/js'
+			// }
 		},
 		modernizr: {
-
+			devFile: 'bower_components/modernizr/modernizr.js',
+			outputFile: 'dist/js/modernizr.js',
+			files: [
+				'app/**/*'
+			]
 		},
 		replace: {
-
+			// not yet
 		}
 
 	});
@@ -58,11 +95,11 @@ module.exports = function (grunt) {
 		'clean',
 		'imagemin',
 		'jshint',
+		'sass',
 		'cssmin',
 		'uglify',
 		'copy',
-		'modernizr',
-		'replace'
+		'modernizr'
 	]);
 
 	grunt.registerTask('default', ['build']);
