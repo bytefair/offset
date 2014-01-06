@@ -67,6 +67,10 @@ module.exports = function (grunt) {
 					'screenshot.png'
 				],
 				dest: '<%= offset.dist %>'
+			},
+			license: {
+				src:  'LICENSE.txt',
+				dest: '<%= offset.dist %>'
 			}
 		},
 		modernizr: {
