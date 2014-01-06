@@ -15,7 +15,8 @@ module.exports = function (grunt) {
 			dist: 'dist',
 		},
 		clean: {
-			dist: ['<%= offset.dist %>']
+			dist: ['<%= offset.dist %>'],
+			build: ['.sass-cache']
 		},
 		imagemin: {
 			dist: {
@@ -92,14 +93,15 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('build', [
-		'clean',
+		'clean:dist',
 		'imagemin',
 		'jshint',
 		'sass',
 		'cssmin',
 		'uglify',
 		'copy',
-		'modernizr'
+		'modernizr',
+		'clean:build'
 	]);
 
 	grunt.registerTask('default', ['build']);
