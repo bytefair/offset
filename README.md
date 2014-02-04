@@ -9,4 +9,5 @@ Offset is a WordPress starter kit that works with Bower/Grunt and will soon have
 
 ## Credits
 
-Offset Printer Photo copyright Philippe Teuwen - http://www.flickr.com/photos/doegox/1060145642
+Offset Printer Photo copyright [Philippe Teuwen](http://www.flickr.com/photos/doegox/1060145642)
+Thanks to [_s](http://underscores.me/) and [Bones](http://themble.com/bones/) for inspiration and a few code snippets.
