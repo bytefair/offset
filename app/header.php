@@ -18,6 +18,7 @@
 
 	<!-- pingback sucks but it's standard and no self-pings are on by default -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
