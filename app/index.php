@@ -35,6 +35,8 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
+		<?php offset_pagination(); ?>
+
 	<?php else : ?>
 
 	<?php endif; ?>
