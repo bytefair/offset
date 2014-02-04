@@ -6,3 +6,7 @@
 4. single.php
 5. page.php
 6. home.php
+
+# Grunt tasks
+
+1. watch task
