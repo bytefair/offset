@@ -3,9 +3,17 @@
 		<h1 class="article__title entry-title"><?php the_title(); ?></h1>
 	</header>
 
-	<div class="article__content">
-		<?php the_content(); ?>
-	</div>
+
+		<?php if ( is_archive() || is_search() ) : ?>
+			<div class="article__excerpt">
+				<?php the_excerpt(); ?>
+			</div>
+		<?php else : ?>
+			<div class="article__content">
+				<?php the_content(); ?>
+			</div>
+		<?php endif; ?>
+
 
 	<footer class="article__footer">
 		<p class="article__categories">
