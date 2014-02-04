@@ -9,7 +9,7 @@
 
 	<footer class="article__footer">
 		<p class="article__categories">
-			Categorized: <?php the_category(', '); ?>
+			<?php _e( 'Categorized: ', 'offset' ); ?><?php the_category(', '); ?>
 		</p>
 		<p class="article__tags">
 			<?php the_tags(); ?>
