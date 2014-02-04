@@ -1,6 +1,6 @@
 # implement the following templates
 
-1. 404.php
+1. 404.php X
 2. search.php
 3. archive.php
 4. single.php
