@@ -10,6 +10,7 @@
 # Grunt tasks
 
 1. watch task
+2. repair all the directory references
 
 # refactor
 
