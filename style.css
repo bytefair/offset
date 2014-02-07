@@ -15,7 +15,3 @@ Offset is a theme that's meant for you to edit directly. It comes with plenty of
 
 Offset uses inspiration and code from Automattic's Underscores theme located at http://underscores.me
 */
-
-@import "../bower_components/pure/pure.css";
-
-@import "sass/base/offset";
