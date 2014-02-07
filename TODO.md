@@ -10,4 +10,7 @@
 # Grunt tasks
 
 1. watch task
-2. refactor functions.php
+
+# refactor
+
+1. functions.php
