@@ -5,7 +5,7 @@
  * Initial setup. Things that must be fired upon the first action hook.
  */
 
-function offset_setup()
+function offset_init()
 {
 	// translation
 	load_theme_textdomain( 'offset', get_template_directory() . '/languages' );
@@ -27,4 +27,4 @@ function offset_setup()
 	// add_editor_style();
 
 }
-add_action( 'after_setup_theme', 'offset_setup' );
+add_action( 'after_setup_theme', 'offset_init' );
