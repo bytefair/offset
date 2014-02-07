@@ -1,6 +1,5 @@
 <?php
 
-add_action( 'widgets_init', 'offset_register_sidebars' );
 function offset_register_sidebars()
 {
 	register_sidebar( array(
@@ -13,3 +12,4 @@ function offset_register_sidebars()
 		'after_title'   => '</h1>',
 	) );
 }
+add_action( 'widgets_init', 'offset_register_sidebars' );

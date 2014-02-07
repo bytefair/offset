@@ -6,7 +6,6 @@ require_once locate_template( 'lib/scripts.php' );
 
 
 // kills self-pings on interlinked articles
-add_action( 'pre_ping', 'kill_self_ping' );
 function kill_self_ping( &$links )
 {
 	$home = get_option( 'home' );
@@ -16,3 +15,4 @@ function kill_self_ping( &$links )
 		}
 	}
 }
+add_action( 'pre_ping', 'kill_self_ping' );
