@@ -1,6 +1,6 @@
 <?php
 // framework includes
-include_once('lib/navigation.php');
+require_once( 'lib/navigation.php' );
 
 add_action( 'widgets_init', 'offset_register_sidebars' );
 function offset_register_sidebars()
