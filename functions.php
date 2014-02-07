@@ -4,16 +4,4 @@ require_once locate_template( 'lib/init.php' );
 require_once locate_template( 'lib/navigation.php' );
 require_once locate_template( 'lib/widgets.php' );
 require_once locate_template( 'lib/scripts.php' );
-
-
-// kills self-pings on interlinked articles
-function kill_self_ping( &$links )
-{
-	$home = get_option( 'home' );
-	foreach ( $links as $l ) {
-		if ( 0 === strpos( $link, $home ) ) {
-			unset( $links[$l] );
-		}
-	}
-}
-add_action( 'pre_ping', 'kill_self_ping' );
+require_once locate_template( 'lib/tweaks.php' );
