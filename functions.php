@@ -10,7 +10,8 @@
 
 //* comments specify where code fires - http://codex.wordpress.org/Plugin_API/Action_Reference
 require_once locate_template( 'lib/init.php' );       // after_setup_theme
-require_once locate_template( 'lib/navigation.php' ); //
-require_once locate_template( 'lib/widgets.php' );
-require_once locate_template( 'lib/scripts.php' );
+require_once locate_template( 'lib/navigation.php' );
+require_once locate_template( 'lib/widgets.php' );    // widgets_init
+require_once locate_template( 'lib/scripts.php' );    // wp_enqueue_scripts
+require_once locate_template( 'lib/cleanup.php' );
 require_once locate_template( 'lib/tweaks.php' );
