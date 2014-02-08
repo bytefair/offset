@@ -52,3 +52,22 @@ function offset_excerpt_length()
 	return EXCERPT_LENGTH;
 }
 add_filter( 'excerpt_length', 'offset_excerpt_length' );
+
+
+//* ugh, more self-closing elements, this time rel=canonical (from Roots)
+function offset_rel_canonical()
+{
+	global $wp_the_query;
+
+	if ( !is_singular() ) {
+		return;
+	}
+
+	if ( !$id = $wp_the_query->get_queried_object_id() ) {
+		return;
+	}
+
+	$link = get_permalink($id);
+	echo "\t<link rel=\"canonical\" href=\"$link\">\n";
+}
+add_action('init', 'offset_head_cleanup');
