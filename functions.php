@@ -9,6 +9,8 @@
  */
 
 //* comments specify where code fires - http://codex.wordpress.org/Plugin_API/Action_Reference
+//  for an explanation of why we use require_once locate_template() see https://github.com/roots/roots/pull/179
+require_once locate_template( 'lib/define.php' );
 require_once locate_template( 'lib/init.php' );       // after_setup_theme
 require_once locate_template( 'lib/navigation.php' );
 require_once locate_template( 'lib/widgets.php' );    // widgets_init

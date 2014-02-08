@@ -2,11 +2,14 @@
 /**
  * cleanup.php
  *
- * This section contains code from Roots and influenced by many developers
+ * This section contains code from Roots and influenced by many developers. This
+ * is some of my favorite code in Roots as I was unaware of most of it before I
+ * read the Roots source. - PG
  */
 
 //* candy nobody wants
-function offset_head_scrubber() {
+function offset_head_scrubber()
+{
 	remove_action( 'wp_head', 'feed_links', 2 );
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	remove_action( 'wp_head', 'rsd_link' );
@@ -23,7 +26,8 @@ add_filter('the_generator', '__return_false');
 
 
 //* clean up output of CSS links (from Roots)
-function offset_clean_style_tag( $input ) {
+function offset_clean_style_tag( $input )
+{
 	preg_match_all( "!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches );
 	// Only display media if it is meaningful
 	$media = $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
@@ -33,9 +37,18 @@ add_filter( 'style_loader_tag', 'offset_clean_style_tag' );
 
 
 //* this ain't no XML son (from Roots)
-function roots_remove_self_closing_tags($input) {
+function offset_remove_self_closing_tags($input)
+{
 	return str_replace(' />', '>', $input);
 }
-add_filter('get_avatar',          'roots_remove_self_closing_tags'); // <img />
-add_filter('comment_id_fields',   'roots_remove_self_closing_tags'); // <input />
-add_filter('post_thumbnail_html', 'roots_remove_self_closing_tags'); // <img />
+add_filter('get_avatar',          'offset_remove_self_closing_tags'); // <img />
+add_filter('comment_id_fields',   'offset_remove_self_closing_tags'); // <input />
+add_filter('post_thumbnail_html', 'offset_remove_self_closing_tags'); // <img />
+
+
+//* use the EXCERPT_LENGTH variable
+function offset_excerpt_length()
+{
+	return EXCERPT_LENGTH;
+}
+add_filter( 'excerpt_length', 'offset_excerpt_length' );
