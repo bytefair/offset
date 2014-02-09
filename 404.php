@@ -1,12 +1,7 @@
 <?php
 /**
- * The fallback template file, index.php
- *
  * 404 Not Found template
- *
- * @package offset
  */
-?><?php
 
 get_template_part( 'templates/header.php' ); ?>
 

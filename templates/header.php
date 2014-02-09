@@ -1,27 +1,9 @@
 <?php
 /**
- * Theme header
- *
- * Controls all code above content pane
- *
- * @package offset
+ * Theme header, controls all code above content pane
  */
-?>
 
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<title><?php wp_title(''); ?></title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- pingback sucks but it's standard and no self-pings are on by default -->
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-
-	<?php wp_head(); ?>
-</head>
+get_template_part( 'head.php' ); ?>
 
 
 <body <?php body_class(); ?>>
