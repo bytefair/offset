@@ -6,20 +6,25 @@
  *
  * @package offset
  */
-?>
+?><?php
 
-<?php get_header(); ?>
+get_template_part( 'templates/header.php' ); ?>
 
 
 <main class="content-pane 404-error">
+
 		<header class="article__header">
 			<h1 class="article__title"><?php _e( '404 Not Found', 'offset' ); ?></h1>
 		</header>
+
 		<div class="article__content">
 			<p><?php _e( 'Nothing was found at this URL. Try searching for your page below.', 'offset' ); ?></p>
-		</div>
-		<?php get_search_form(); ?>
-</main>
+		</div><?php
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+		get_search_form(); ?>
+
+</main><?php
+
+
+get_template_part( 'templates/sidebar.php' );
+get_template_part( 'templates/footer.php' );
