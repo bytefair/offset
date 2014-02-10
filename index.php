@@ -5,7 +5,7 @@
  * and style.css are required for WordPress to load a theme.
  */
 
-get_template_part( 'templates/header.php', get_post_format() ); ?>
+get_template_part( 'templates/header', get_post_format() ); ?>
 
 
 <main class="content-pane hfeed index"><?php
@@ -23,5 +23,5 @@ get_template_part( 'templates/header.php', get_post_format() ); ?>
 </main><?php
 
 
-get_template_part( 'templates/sidebar.php', get_post_format() );
-get_template_part( 'templates/footer.php', get_post_format() );
+get_template_part( 'templates/sidebar', get_post_format() );
+get_template_part( 'templates/footer', get_post_format() );

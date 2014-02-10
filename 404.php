@@ -3,7 +3,7 @@
  * 404 Not Found template
  */
 
-get_template_part( 'templates/header.php' ); ?>
+get_template_part( 'templates/header' ); ?>
 
 
 <main class="content-pane 404-error">
@@ -21,5 +21,5 @@ get_template_part( 'templates/header.php' ); ?>
 </main><?php
 
 
-get_template_part( 'templates/sidebar.php' );
-get_template_part( 'templates/footer.php' );
+get_template_part( 'templates/sidebar' );
+get_template_part( 'templates/footer' );
