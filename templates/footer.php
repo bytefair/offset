@@ -1,13 +1,3 @@
-<?php
-/**
- * Theme footer
- *
- * Controls all code below content pane
- *
- * @package offset
- */
-?>
-
 <footer role="contentinfo" class="site__footer">
 	<!-- navigation? -->
 </footer>

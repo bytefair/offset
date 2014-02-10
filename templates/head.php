@@ -1,8 +1,3 @@
-<?php
-/**
- * Controls the document's <head>
- */
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>

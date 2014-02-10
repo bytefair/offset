@@ -37,7 +37,7 @@ add_filter( 'style_loader_tag', 'offset_clean_style_tag' );
 
 
 //* this ain't no XML son (from Roots)
-function offset_remove_self_closing_tags($input)
+function offset_remove_self_closing_tags( $input )
 {
 	return str_replace(' />', '>', $input);
 }

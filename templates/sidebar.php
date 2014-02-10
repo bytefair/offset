@@ -1,9 +1,3 @@
-<?php
-/**
- * Controls dynamic sidebar
- */
-?>
-
 <div role="complementary" class="sidebar"><?php
 	if ( ! dynamic_sidebar( 'sidebar-default' ) ) :
 		if ( WP_DEBUG ) {
