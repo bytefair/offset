@@ -1,6 +1,6 @@
 <?php
 
-get_template_part( 'head.php' ); ?>
+get_template_part( 'templates/head' ); ?>
 
 
 <body <?php body_class(); ?>>
