@@ -1,6 +1,6 @@
 <?php
 
-// kills self-pings on interlinked articles
+//* kills self-pings on interlinked articles
 function kill_self_ping( &$links )
 {
 	$home = get_option( 'home' );
