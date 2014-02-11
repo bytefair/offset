@@ -12,7 +12,7 @@ function offset_init()
 
 	// http://codex.wordpress.org/Function_Reference/register_nav_menus
 	register_nav_menus( array(
-		'main_navigation' => __( 'Main Navigation', 'offset' )
+		'main-navigation' => __( 'Main Navigation', 'offset' )
 	) );
 
 	// http://codex.wordpress.org/Function_Reference/add_theme_support
