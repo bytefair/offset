@@ -1,10 +1,12 @@
 # Offset
 
-Offset is a WordPress starter kit that works with Bower/Grunt and will soon have a Yo generator.
+Offset is a WordPress starter kit that works with Bower/Grunt.
 
 ## Requirements
 
-1. PHP 5.3+
+1. PHP 5.3+ with Composer
+2. NPM
+3. Ruby 1.9+
 
 ## Special Directories
 
@@ -13,6 +15,14 @@ Offset is a WordPress starter kit that works with Bower/Grunt and will soon have
 
 ## Understanding Functions
 
+## Recommended Plugins
+
+Since this theme is meant to be compatible with Bedrock, you should be using [WPackagist](http://wpackagist.org) to manage your WP.org plugins through Composer. For that reason, I've not included any sort of activation script to auto-install plugins but there are a few I would suggest you consider.
+
+* Nice Search - <http://wordpress.org/plugins/nice-search/>
+* Advanced Custom Fields - <http://wordpress.org/plugins/advanced-custom-fields/>
+* Pods - <http://wordpress.org/plugins/pods/>
+* Slim Jetpack - <https://wordpress.org/plugins/slimjetpack/>
 
 ## Credits
 
