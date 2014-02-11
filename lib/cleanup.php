@@ -74,7 +74,8 @@ add_action('init', 'offset_head_cleanup');
 
 
 //* clean up body_class() ouput (from Roots)
-function offset_body_class( $classes ) {
+function offset_body_class( $classes )
+{
 	// Add post/page slug
 	if (is_single() || is_page() && !is_front_page()) {
 		$classes[] = basename(get_permalink());
@@ -91,3 +92,39 @@ function offset_body_class( $classes ) {
 	return $classes;
 }
 add_filter('body_class', 'offset_body_class');
+
+
+//* use <figure> and <figcaption> on images (from Roots)
+function offset_caption( $output, $attr, $content )
+{
+	if (is_feed()) {
+		return $output;
+	}
+
+	$defaults = array(
+		'id'      => '',
+		'align'   => 'alignnone',
+		'width'   => '',
+		'caption' => ''
+	);
+
+	$attr = shortcode_atts($defaults, $attr);
+
+	// If the width is less than 1 or there is no caption, return the content wrapped between the [caption] tags
+	if ($attr['width'] < 1 || empty($attr['caption'])) {
+		return $content;
+	}
+
+	// Set up the attributes for the caption <figure>
+	$attributes  = (!empty($attr['id']) ? ' id="' . esc_attr($attr['id']) . '"' : '' );
+	$attributes .= ' class="thumbnail wp-caption ' . esc_attr($attr['align']) . '"';
+	$attributes .= ' style="width: ' . (esc_attr($attr['width']) + 10) . 'px"';
+
+	$output  = '<figure' . $attributes .'>';
+	$output .= do_shortcode($content);
+	$output .= '<figcaption class="caption wp-caption-text">' . $attr['caption'] . '</figcaption>';
+	$output .= '</figure>';
+
+	return $output;
+}
+add_filter('img_caption_shortcode', 'offset_caption', 10, 3);
