@@ -7,6 +7,8 @@
 5. page.php
 6. home.php
 
+1. show # comments on blog/archive view
+
 # Grunt tasks
 
 1. watch task
