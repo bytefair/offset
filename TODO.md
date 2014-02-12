@@ -1,11 +1,4 @@
-# implement the following templates
-
-1. 404.php X
-2. search.php
-3. archive.php
-4. single.php
-5. page.php
-6. home.php
+# fixes needed
 
 1. show # comments on blog/archive view
 2. bad "categorized" shows up on pages in search
