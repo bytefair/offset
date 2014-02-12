@@ -7,15 +7,9 @@
 	</header>
 
 
-		<?php if ( is_archive() || is_search() ) : ?>
-			<div class="article__excerpt">
-				<?php the_excerpt(); ?>
-			</div>
-		<?php else : ?>
-			<div class="article__content">
-				<?php the_content(); ?>
-			</div>
-		<?php endif; ?>
+	<div class="article__content">
+		<?php the_content(); ?>
+	</div>
 
 
 	<footer class="article__footer">
@@ -25,7 +19,7 @@
 		<p class="article__tags">
 			<?php the_tags(); ?>
 		</p>
-		<?php wp_link_pages( array( 'before' => '<nav class="page-nav"><p>' . __( 'Pages:', 'offset' ), 'after' => '</p></nav>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>' ) ); ?>
 	</footer>
 	<?php comments_template(); ?>
 </article>
