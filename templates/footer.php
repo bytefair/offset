@@ -1,5 +1,5 @@
 <footer role="contentinfo" class="site__footer">
-	<!-- navigation? -->
+
 </footer>
 
 
