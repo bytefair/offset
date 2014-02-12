@@ -5,10 +5,10 @@
  * and style.css are required for WordPress to load a theme.
  */
 
-get_template_part( 'templates/header', get_post_format() ); ?>
+get_template_part( 'templates/header' ); ?>
 
 
-<main class="content-pane hfeed index"><?php
+<main class="content-pane hfeed"><?php
 
 	if ( have_posts() ) :
 		while ( have_posts() ) :
@@ -23,5 +23,5 @@ get_template_part( 'templates/header', get_post_format() ); ?>
 </main><?php
 
 
-get_template_part( 'templates/sidebar', get_post_format() );
-get_template_part( 'templates/footer', get_post_format() );
+get_template_part( 'templates/sidebar' );
+get_template_part( 'templates/footer' );
