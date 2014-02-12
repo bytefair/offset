@@ -8,6 +8,7 @@
 6. home.php
 
 1. show # comments on blog/archive view
+2. bad "categorized" shows up on pages in search
 
 # Grunt tasks
 
