@@ -13,7 +13,8 @@ get_template_part( 'templates/header' ); ?>
 	while ( have_posts() ) :
 		the_post();
 		the_content();
-	endwhile; ?>
+	endwhile;
+	wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
 
 </main><?php
 
