@@ -8,7 +8,7 @@ get_template_part( 'templates/head' ); ?>
 
 
 <header role="banner" class="site__header">
-	<h1><?php bloginfo('name'); ?></h1>
+	<a href="<?php echo home_url( '/' ); ?>"><h1><?php bloginfo('name'); ?></h1>
 	<?php if ( has_nav_menu( 'main-navigation' ) ) : ?>
 		<nav class="main-navigation">
 			<?php wp_nav_menu( 'main-navigation' ); ?>
