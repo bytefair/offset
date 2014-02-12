@@ -12,6 +12,6 @@
   "license": "GPL 2.0",
   "homepage": "http://github.com/bytefair/offset",
   "dependencies": {
-    "modernizr": "~2.7.1"
+    "inuitcss": "~5.0.0"
   }
 }
