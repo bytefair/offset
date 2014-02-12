@@ -1,6 +1,6 @@
 <?php
 
-function offset_pagination()
+function offset_blog_pagination()
 {
 	global $wp_query;
 

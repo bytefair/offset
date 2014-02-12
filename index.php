@@ -15,7 +15,7 @@ get_template_part( 'templates/header', get_post_format() ); ?>
 			the_post();
 			get_template_part( 'templates/content', get_post_format() );
 		endwhile;
-		offset_pagination();
+		offset_blog_pagination();
 	else :
 		get_template_part( 'templates/content', 'none' );
 	endif; ?>
