@@ -70,7 +70,7 @@ function offset_rel_canonical()
 	$link = get_permalink($id);
 	echo "\t<link rel=\"canonical\" href=\"$link\">\n";
 }
-add_action('init', 'offset_head_cleanup');
+add_action( 'init', 'offset_rel_canonical' );
 
 
 //* clean up body_class() ouput (from Roots)
@@ -91,7 +91,7 @@ function offset_body_class( $classes )
 
 	return $classes;
 }
-add_filter('body_class', 'offset_body_class');
+add_filter( 'body_class', 'offset_body_class' );
 
 
 //* use <figure> and <figcaption> on images (from Roots)
