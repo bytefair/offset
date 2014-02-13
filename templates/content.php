@@ -17,13 +17,14 @@
 			</div>
 		<?php endif; ?>
 
-
-	<footer class="article__footer">
-		<p class="article__categories">
-			<?php _e( 'Categorized: ', 'offset' ); ?><?php the_category(', '); ?>
-		</p>
-		<p class="article__tags">
-			<?php the_tags(); ?>
-		</p>
-	</footer>
+	<?php if ( !is_page() ) : ?>
+		<footer class="article__footer">
+			<p class="article__categories">
+				<?php _e( 'Categorized: ', 'offset' ); ?><?php the_category(', '); ?>
+			</p>
+			<p class="article__tags">
+				<?php the_tags(); ?>
+			</p>
+		</footer>
+	<?php endif; ?>
 </article>
