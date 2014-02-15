@@ -1,4 +1,9 @@
 <?php
+/**
+ * scripts.php
+ *
+ * Loads scripts and styles
+ */
 
 function offset_load_styles()
 {

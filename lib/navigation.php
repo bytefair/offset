@@ -1,5 +1,19 @@
 <?php
+/**
+ * navigation.php
+ *
+ * Controls navigational elements such as pagination and menus
+ */
 
+// http://codex.wordpress.org/Function_Reference/register_nav_menus
+function offset_menu_init() {
+	register_nav_menus( array(
+		'main-navigation' => __( 'Main Navigation', 'offset' )
+	) );
+}
+
+
+//* controls the blog/archive pagination
 function offset_blog_pagination()
 {
 	global $wp_query;
@@ -22,3 +36,4 @@ function offset_blog_pagination()
 		echo '</nav>';
 	}
 }
+

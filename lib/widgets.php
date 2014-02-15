@@ -1,4 +1,9 @@
 <?php
+/**
+ * widgets.php
+ *
+ * Defines sidebars and widget stuff
+ */
 
 function offset_register_sidebars()
 {

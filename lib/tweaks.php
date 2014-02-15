@@ -1,4 +1,9 @@
 <?php
+/**
+ * tweaks.php
+ *
+ * Contains various tweaks that change WP functionality
+ */
 
 //* kills self-pings on interlinked articles
 function kill_self_ping( &$links )

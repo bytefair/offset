@@ -1,19 +1,15 @@
 <?php
 /**
- * setup-theme.php
+ * init.php
  *
- * Initial setup. Things that must be fired upon the first action hook.
+ * Initial setup. Things that must be fired upon the first action hook. Menus
+ * are in navigation.php even though they must be fired on init.
  */
 
 function offset_init()
 {
 	// translation
 	load_theme_textdomain( 'offset', get_template_directory() . '/languages' );
-
-	// http://codex.wordpress.org/Function_Reference/register_nav_menus
-	register_nav_menus( array(
-		'main-navigation' => __( 'Main Navigation', 'offset' )
-	) );
 
 	// http://codex.wordpress.org/Function_Reference/add_theme_support
 	add_theme_support( 'post-thumbnails' );
@@ -27,4 +23,4 @@ function offset_init()
 	// add_editor_style();
 
 }
-add_action( 'after_setup_theme', 'offset_init' );
+edd_action( 'after_setup_theme', 'offset_init' );
