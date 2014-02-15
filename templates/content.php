@@ -1,4 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'hentry' ); ?>>
+
+
 	<header class="article__header">
 		<a href="<?php the_permalink(); ?>"><h1 class="article__title entry-title"><?php the_title(); ?></h1></a>
 		<div class="article__meta byline author vcard">
@@ -27,4 +29,6 @@
 			</p>
 		</footer>
 	<?php endif; ?>
+
+
 </article>
