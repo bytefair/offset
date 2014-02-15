@@ -11,7 +11,7 @@ function offset_menu_init() {
 		'main-navigation' => __( 'Main Navigation', 'offset' )
 	) );
 }
-
+add_action( 'after_setup_theme', 'offset_menu_init' );
 
 //* controls the blog/archive pagination
 function offset_blog_pagination()

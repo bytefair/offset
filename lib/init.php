@@ -3,7 +3,7 @@
  * init.php
  *
  * Initial setup. Things that must be fired upon the first action hook. Menus
- * are in navigation.php even though they must be fired on init.
+ * are in navigation.php even though they must be fired on after_setup_theme.
  */
 
 function offset_init()
@@ -23,4 +23,4 @@ function offset_init()
 	// add_editor_style();
 
 }
-edd_action( 'after_setup_theme', 'offset_init' );
+add_action( 'after_setup_theme', 'offset_init' );
