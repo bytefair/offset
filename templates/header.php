@@ -12,7 +12,8 @@ get_template_part( 'templates/head' ); ?>
 	<?php if ( has_nav_menu( 'main-navigation' ) ) : ?>
 		<nav class="main-navigation"><?php
 			wp_nav_menu( array(
-				'theme_location' => 'main-navigation'
+				'theme_location' => 'main-navigation',
+				'container'      => false
 			) ); ?>
 		</nav>
 	<?php endif; ?>
