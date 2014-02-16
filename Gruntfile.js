@@ -8,23 +8,17 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 
-		// configurable offsets
-		offset: {
-			// directory defs
-			app:  'app',
-			dist: 'dist',
-		},
 		clean: {
-			dist: ['<%= offset.dist %>'],
+			dist: ['dist'],
 			build: ['.sass-cache']
 		},
 		imagemin: {
 			dist: {
 				files: [{
 					expand: true,
-					cwd:  '<%= offset.app %>/images',
+					cwd:  'assets/images',
 					src:  '{,*/}*.{gif,jpeg,jpg,png}',
-					dest: '<%= offset.dist %>/images'
+					dest: 'dist/images'
 				}]
 			}
 		},
@@ -39,47 +33,34 @@ module.exports = function (grunt) {
 		sass: {
 			dist: {
 				files: {
-					'<%= offset.dist %>/style.css': '<%= offset.app %>/style.scss'
+					'dist/css/master.css': 'assets/sass/master.scss'
 				}
 			}
 		},
 		cssmin: {
 			dist: {
 				files: {
-					'<%= offset.dist %>/style.css': '<%= offset.dist %>/style.css'
+					'dist/css/master.min.css': 'dist/css/master.css'
+				},
+				minify: {
 				}
 			}
 		},
 		uglify: {
 			dist: {
 				expand: true,
-				cwd: '<%= offset.app %>/js',
+				cwd: 'assets/js',
 				src: '**/*.js',
-				dest: '<%= offset.dist %>/js'
+				dest: 'dist/js'
 			}
 		},
-		copy: {
-			templates: {
-				expand: true,
-				cwd: '<%= offset.app %>',
-				src: [
-					'**/*.{php,txt,md}',
-					'screenshot.png'
-				],
-				dest: '<%= offset.dist %>'
-			},
-			license: {
-				src:  'LICENSE.txt',
-				dest: '<%= offset.dist %>/LICENSE.txt'
-			}
-		},
-		modernizr: {
-			devFile: 'bower_components/modernizr/modernizr.js',
-			outputFile: 'dist/js/modernizr.js',
-			files: [
-				'app/**/*'
-			]
-		}
+		// modernizr: {
+		// 	devFile: 'bower_components/modernizr/modernizr.js',
+		// 	outputFile: 'dist/js/modernizr.js',
+		// 	files: [
+		// 		'app/**/*'
+		// 	]
+		// }
 
 	});
 
@@ -108,8 +89,6 @@ module.exports = function (grunt) {
 		'sass',
 		'cssmin',
 		'uglify',
-		'copy',
-		'modernizr',
 		'clean:build'
 	]);
 
