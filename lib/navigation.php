@@ -8,10 +8,10 @@
 // http://codex.wordpress.org/Function_Reference/register_nav_menus
 function offset_menu_init() {
 	register_nav_menus( array(
-		'main-navigation' => __( 'Main Navigation', 'offset' )
+		'main-navigation'   => __( 'Main Navigation', 'offset' )
 	) );
 }
-add_action( 'after_setup_theme', 'offset_menu_init' );
+add_action( 'init', 'offset_menu_init' );
 
 //* controls the blog/archive pagination
 function offset_blog_pagination()

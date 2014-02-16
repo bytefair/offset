@@ -2,8 +2,7 @@
 /**
  * init.php
  *
- * Initial setup. Things that must be fired upon the first action hook. Menus
- * are in navigation.php even though they must be fired on after_setup_theme.
+ * Initial setup. Things that must be fired upon the first action hook.
  */
 
 function offset_init()
