@@ -5,7 +5,7 @@
  * Controls navigational elements such as pagination and menus
  */
 
-// http://codex.wordpress.org/Function_Reference/register_nav_menus
+//* http://codex.wordpress.org/Function_Reference/register_nav_menus
 function offset_menu_init()
 {
 	register_nav_menus( array(

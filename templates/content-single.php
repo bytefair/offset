@@ -1,4 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'hentry' ); ?>>
+
+
 	<header class="article__header">
 		<h1 class="article__title entry-title"><?php the_title(); ?></h1>
 		<div class="article__meta byline author vcard">
@@ -21,5 +23,9 @@
 		</p>
 		<?php wp_link_pages( array( 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>' ) ); ?>
 	</footer>
+
+
 	<?php comments_template(); ?>
+
+
 </article>
