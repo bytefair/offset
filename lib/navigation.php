@@ -21,7 +21,7 @@ function offset_blog_pagination()
 
 	$total_pages = $wp_query->max_num_pages;
 	if ( $total_pages > 1 ) {
-		echo '<nav class="pagination">';
+		echo '<nav class="pager">';
 
 		$current_page = max( 1, get_query_var( 'paged' ) );
 		echo paginate_links( array(
