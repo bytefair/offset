@@ -7,5 +7,8 @@
  * well.
  */
 
+// $content_width is used for images
+if ( !isset( $content_width ) ) { $content_width = 1140; }
+
 // number of words uses for excerpts
 define( 'EXCERPT_LENGTH', 40 );
