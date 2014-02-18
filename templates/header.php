@@ -10,7 +10,7 @@ get_template_part( 'templates/head' ); ?>
 <header role="banner" class="site__header">
 	<a href="<?php echo home_url( '/' ); ?>"><h1><?php bloginfo('name'); ?></h1></a>
 	<?php if ( has_nav_menu( 'main-navigation' ) ) : ?>
-		<nav class="main-navigation"><?php
+		<nav class="site__navigation"><?php
 			wp_nav_menu( array(
 				'theme_location' => 'main-navigation',
 				'container'      => false
