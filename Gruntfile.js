@@ -10,7 +10,8 @@ module.exports = function (grunt) {
 
 		clean: { // deletes and cleans unneeded files
 			dist: ['dist'],
-			build: ['.sass-cache']
+			build: ['.sass-cache'],
+			css: ['dist/**/*.css']
 		},
 		imagemin: { // minfies most image types, need a separate plugin for SVG
 			dist: {
@@ -71,7 +72,7 @@ module.exports = function (grunt) {
 					'assets/sass/**/*.scss',
 					'bower_components/inuitcss/**/*.scss'
 				],
-				tasks: [ 'sass', 'cssmin', 'version' ]
+				tasks: [ 'clean:css', 'sass', 'cssmin', 'version', 'clean:build' ]
 			},
 			js: {
 				files: [ '<%= jshint.all %>' ],
