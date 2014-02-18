@@ -8,11 +8,11 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 
-		clean: {
+		clean: { // deletes and cleans unneeded files
 			dist: ['dist'],
 			build: ['.sass-cache']
 		},
-		imagemin: {
+		imagemin: { // minfies most image types, need a separate plugin for SVG
 			dist: {
 				files: [{
 					expand: true,
@@ -22,22 +22,22 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-		jshint: {
-			dist: {
-				options: {
-					jshintrc: '.jshintrc',
-					reporter: require('jshint-stylish')
-				}
-			}
+		jshint: { // the most popular JS linter
+			options: {
+				jshintrc: '.jshintrc',
+				reporter: require('jshint-stylish')
+			},
+			all: [
+			]
 		},
-		sass: {
+		sass: { // compiles your Sass, this can easily be replaced with LESS
 			dist: {
 				files: {
 					'dist/css/master.css': 'assets/sass/master.scss'
 				}
 			}
 		},
-		cssmin: {
+		cssmin: { // CSS compressor
 			dist: {
 				files: {
 					'dist/css/master.min.css': 'dist/css/master.css'
@@ -46,7 +46,7 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		uglify: {
+		uglify: { // JS compressor
 			dist: {
 				expand: true,
 				cwd: 'assets/js',
@@ -54,6 +54,41 @@ module.exports = function (grunt) {
 				dest: 'dist/js'
 			}
 		},
+		version: { // automatic cachebusting for your CSS/JS
+			assets: {
+				options: {
+					rename: true,
+					format: false,
+					length: 8
+				},
+				src: ['dist/css/master.min.css'],
+				dest: 'lib/scripts.php'
+			}
+		},
+		watch: { // automatic processing in development
+			sass: {
+				files: [
+					'assets/sass/**/*.scss',
+					'bower_components/inuitcss/**/*.scss'
+				],
+				tasks: [ 'sass', 'cssmin', 'version' ]
+			},
+			js: {
+				files: [ '<%= jshint.all %>' ],
+				tasks: [ 'jshint', 'uglify', 'version' ]
+			},
+			livereload: { // set up your livereload here, not currently enabled
+				options: {
+					livereload: false
+				},
+				files: [
+					'dist/**/*.min.*',
+					'*.php',
+					'lib/*.php',
+					'templates/*.php'
+				]
+			}
+		}
 		// modernizr: {
 		// 	devFile: 'bower_components/modernizr/modernizr.js',
 		// 	outputFile: 'dist/js/modernizr.js',
@@ -89,12 +124,17 @@ module.exports = function (grunt) {
 		'sass',
 		'cssmin',
 		'uglify',
+		'version',
 		'clean:build'
 	]);
 
 	grunt.registerTask('install', [
 		'npm-install',
 		'bower-install'
+	]);
+
+	grunt.registerTask('dev', [
+		'watch'
 	]);
 
 	grunt.registerTask('default', ['build']);
