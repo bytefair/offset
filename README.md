@@ -2,6 +2,18 @@
 
 Offset is a WordPress starter kit that works with Bower/Grunt.
 
+## Why Use Offset?
+
+There a million different WordPress frameworks out there so what makes Offset unique? In short, it's because Offset stays out of your way. I have tried whenever possible to pick the most generic, widely applicable solutions for every WordPress site. Offset is not a theme so much as what WordPress should come with out of the box for custom theme developers.
+
+Perhaps you've tried something like [Bones](http://themble.com/bones/) in the past and loved the ideas but perhaps you  Or perhaps you've even tried a more radical solution such as [Roots](http://roots.io/), which aggressively tries to modernize the WordPress workflow. I love Roots and I think a lot of the ideas are great, but it agressively changes some default functionality as well as using the Bootstrap framework which is pretty heavy stuff.
+
+Roots even does some things which I'm fairly certain could interfere with particular plugins. I don't know this is the case but I can see it being possible as Roots changes things like menu classes. In theory a lot of the ideas are good like using a theme wrapper and cleaning up some of the code but it's not what people expect when coming from WordPress. People expect to exploit the template heirarchy on its own and already have preconceptions about how those things work. Despite my complete agreement with DRY, people also think a certain way about theme development because of years with WordPress.
+
+I think there's a middle ground. I've made the simplest possible theme from scratch and kept the functionality as close to default as possible to not produce horrible code. This is not as hard now that WordPress has HTML5 comments and forms you can turn on. I've tried to break down the theme into the smallest practical logical units that are easily overridden.
+
+Instead of the heavy Bootstrap framework, I've chosen the light and far less opinionated [inuit.css](http://inuitcss.com). I've linked all the style code to CSS classes so there are no framework-specific classes anywhere. In fact, I've chosen to intentionally avoid collisions with inuit so choosing a different CSS framework is literally as easy as deleting the Sass folder.
+
 ## Requirements
 
 1. PHP 5.3+ with Composer
