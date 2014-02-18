@@ -9,3 +9,17 @@
 .sidebar {
 	@extend .grid__item;
 }
+
+.page {
+	.content-pane {
+		@extend .one-whole;
+	}
+}
+
+.content-pane {
+	@extend .desk-two-thirds;
+}
+
+.sidebar {
+	@extend .desk-one-third;
+}
