@@ -32,7 +32,8 @@ function offset_blog_pagination()
 			'prev_text' => '&larr;&nbsp;Previous',
 			'next_text' => 'Next&nbsp;&rarr;',
 			'end_size'  => 3,
-			'mid_size'  => 3
+			'mid_size'  => 3,
+			'type'      => 'list'
 		) );
 		echo '</nav>';
 	}
