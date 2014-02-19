@@ -1,0 +1,4 @@
+.pager ul {
+	@extend .nav;
+	@extend .pagination;
+}
