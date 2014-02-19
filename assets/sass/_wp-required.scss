@@ -4,9 +4,18 @@
 .sticky {}
 .gallery-caption {}
 .bypostauthor {}
-.alignright {}
-.alignleft {}
-.aligncenter {}
+
+.alignright {
+	@extend .img--right;
+}
+
+.alignleft {
+	@extend .img--left;
+}
+
+.aligncenter {
+	@extend .img--center;
+}
 
 .screen-reader-text {
 	@extend .visuallyhidden;
