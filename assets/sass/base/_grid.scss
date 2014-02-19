@@ -1,4 +1,6 @@
-.site__wrapper {
+.header__wrapper,
+.footer__wrapper,
+.main__wrapper {
 	@extend .grid;
 }
 
@@ -7,6 +9,20 @@
 .content-pane,
 .sidebar {
 	@extend .grid__item;
+}
+
+.header__wrapper,
+.footer__wrapper,
+.main__wrapper {
+	max-width: 1140px;
+	margin: 0 auto;
+	display: block;
+}
+
+.site__header,
+.site__footer,
+{
+	@extend .one-whole;
 }
 
 .page {

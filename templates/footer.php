@@ -1,6 +1,10 @@
+</div>
+
+<div class="footer__wrapper">
 <footer role="contentinfo" class="site__footer">
 
 </footer>
+</div>
 
 
 </div><!-- end of .site__wrapper -->
