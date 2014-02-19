@@ -3,7 +3,8 @@ button {
 	@extend .btn;
 }
 
+.text-input {}
+
 input[type="search"] {
 	@extend .text-input;
-	height: $base-line-height;
 }
