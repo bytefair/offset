@@ -1,0 +1,11 @@
+.sidebar .search-form {
+	label {
+		display: inline;
+	}
+	.search-field {
+
+	}
+	.search-submit {
+		@extend .btn--small;
+	}
+}

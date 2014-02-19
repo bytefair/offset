@@ -1,0 +1,9 @@
+input[type="submit"],
+button {
+	@extend .btn;
+}
+
+input[type="search"] {
+	@extend .text-input;
+	height: $base-line-height;
+}
