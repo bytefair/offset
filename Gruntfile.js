@@ -72,7 +72,7 @@ module.exports = function (grunt) {
 					'assets/sass/**/*.scss',
 					'bower_components/inuitcss/**/*.scss'
 				],
-				tasks: [ 'clean:css', 'sass', 'cssmin', 'version', 'clean:build' ]
+				tasks: [ 'clean:css', 'sass', 'cssmin', 'version' ]
 			},
 			js: {
 				files: [ '<%= jshint.all %>' ],
