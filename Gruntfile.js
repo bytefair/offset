@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 		sass: { // compiles your Sass, this can easily be replaced with LESS
 			dist: {
 				files: {
-					'dist/css/master.css': 'assets/sass/master.scss'
+					'dist/css/master.css': 'assets/stylesheets/master.scss'
 				}
 			}
 		},
