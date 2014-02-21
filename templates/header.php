@@ -21,3 +21,4 @@ get_template_part( 'templates/head' ); ?>
 </div>
 
 <div class="main__wrapper">
+<div class="content-sidebar__wrapper">

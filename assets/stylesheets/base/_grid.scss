@@ -1,5 +1,5 @@
 .site__header,
 .site__footer,
-.content-pane {
-	@extend .container-fluid;
+.content-sidebar__wrapper {
+	@extend .container;
 }
