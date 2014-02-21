@@ -69,7 +69,7 @@ module.exports = function (grunt) {
 		watch: { // automatic processing in development
 			sass: {
 				files: [
-					'assets/sass/**/*.scss',
+					'assets/stylesheets/**/*.scss',
 					'bower_components/inuitcss/**/*.scss'
 				],
 				tasks: [ 'clean:css', 'sass', 'cssmin', 'version' ]

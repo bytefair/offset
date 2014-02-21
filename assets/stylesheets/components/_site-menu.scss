@@ -1,3 +1,5 @@
 .site__navigation .menu {
 	@extend .nav;
+	@extend .nav-pills;
+	@extend .nav-justified;
 }

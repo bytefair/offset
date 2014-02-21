@@ -1,40 +1,5 @@
-.header__wrapper,
-.footer__wrapper,
-.main__wrapper {
-	@extend .grid;
-}
-
 .site__header,
 .site__footer,
-.content-pane,
-.sidebar {
-	@extend .grid__item;
-}
-
-.header__wrapper,
-.footer__wrapper,
-.main__wrapper {
-	max-width: 1140px;
-	margin: 0 auto;
-	display: block;
-}
-
-.site__header,
-.site__footer,
-{
-	@extend .one-whole;
-}
-
-.page {
-	.content-pane {
-		@extend .one-whole;
-	}
-}
-
 .content-pane {
-	@extend .desk-two-thirds;
-}
-
-.sidebar {
-	@extend .desk-one-third;
+	@extend .container-fluid;
 }

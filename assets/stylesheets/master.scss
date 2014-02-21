@@ -7,4 +7,10 @@
 /*!
  * starter code
  */
+@import "base/grid";
+@import "base/media";
+
+@import "components/pagination";
+@import "components/site-menu";
+
 @import "wp-required";
