@@ -9,5 +9,4 @@ select {
 button,
 input[type="submit"] {
 	@extend .btn;
-	@extend .btn-default;
 }
