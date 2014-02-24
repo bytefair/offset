@@ -5,8 +5,4 @@
 3. make shortcodes for columns
 4. make shortcodes for buttons
 5. must show comments on pages if people are dumb, check "page with comments" on theme unit test
-
-# Grunt tasks
-
-1. watch task
-2. repair all the directory references
+6. fix the thumbnails, inheriting problems from default thumbnail class
