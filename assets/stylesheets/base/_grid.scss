@@ -3,3 +3,15 @@
 .content-sidebar__wrapper {
 	@extend .container;
 }
+
+.content-pane {
+	@extend .col-md-8;
+	.single &,
+	.page & {
+		@extend .col-md-12;
+	}
+}
+
+.sidebar {
+	@extend .col-md-4;
+}
