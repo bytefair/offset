@@ -9,9 +9,13 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 
 		clean: { // deletes and cleans unneeded files
-			dist: ['dist'],
-			build: ['.sass-cache'],
-			css: ['dist/**/*.css']
+			dist:  ['dist'],
+			build: [
+				'.sass-cache',
+				'dist/master.css'
+			],
+			css:   ['dist/*.css'],
+			js:    ['dist/*.js']
 		},
 		imagemin: { // minfies most image types, need a separate plugin for SVG
 			dist: {
@@ -19,7 +23,7 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd:  'assets/images',
 					src:  '{,*/}*.{gif,jpeg,jpg,png}',
-					dest: 'dist/images'
+					dest: 'dist'
 				}]
 			}
 		},
@@ -29,19 +33,22 @@ module.exports = function (grunt) {
 				reporter: require('jshint-stylish')
 			},
 			all: [
+				'Gruntfile.js',
+				'assets/javascripts/*.js',
+				'!assets/javascripts/**/*.min.js'
 			]
 		},
 		sass: { // compiles your Sass, this can easily be replaced with LESS
 			dist: {
 				files: {
-					'dist/css/master.css': 'assets/stylesheets/master.scss'
+					'dist/master.css': 'assets/stylesheets/master.scss'
 				}
 			}
 		},
 		cssmin: { // CSS compressor
 			dist: {
 				files: {
-					'dist/css/master.min.css': 'dist/css/master.css'
+					'dist/master.min.css': 'dist/master.css'
 				},
 				minify: {
 				}
@@ -49,10 +56,11 @@ module.exports = function (grunt) {
 		},
 		uglify: { // JS compressor
 			dist: {
-				expand: true,
-				cwd: 'assets/js',
-				src: '**/*.js',
-				dest: 'dist/js'
+				files: {
+					'dist/footer.min.js': [
+						'assets/javascripts/bootstrap/dropdown.js'
+					]
+				}
 			}
 		},
 		version: { // automatic cachebusting for your CSS/JS
@@ -62,7 +70,10 @@ module.exports = function (grunt) {
 					format: false,
 					length: 8
 				},
-				src: ['dist/css/master.min.css'],
+				src: [
+					'dist/master.min.css',
+					'dist/footer.min.js'
+				],
 				dest: 'lib/scripts.php'
 			}
 		},
@@ -76,7 +87,7 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: [ '<%= jshint.all %>' ],
-				tasks: [ 'jshint', 'uglify', 'version' ]
+				tasks: [ 'clean:js', 'jshint', 'uglify', 'version' ]
 			},
 			livereload: { // set up your livereload here, not currently enabled
 				options: {
@@ -90,13 +101,6 @@ module.exports = function (grunt) {
 				]
 			}
 		}
-		// modernizr: {
-		// 	devFile: 'bower_components/modernizr/modernizr.js',
-		// 	outputFile: 'dist/js/modernizr.js',
-		// 	files: [
-		// 		'app/**/*'
-		// 	]
-		// }
 
 	});
 
