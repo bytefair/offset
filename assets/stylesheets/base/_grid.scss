@@ -11,7 +11,6 @@
 
 .content-pane {
 	@extend .col-md-8;
-	.single &,
 	.page & {
 		@extend .col-md-12;
 	}
