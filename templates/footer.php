@@ -3,7 +3,8 @@
 
 <div class="footer__wrapper">
 <footer role="contentinfo" class="site__footer">
-
+	<div class="site__footer__content">
+	</div>
 </footer>
 </div>
 

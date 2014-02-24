@@ -4,6 +4,11 @@
 	@extend .container;
 }
 
+.site__header__content,
+.site__footer__content {
+	@extend .col-xs-12;
+}
+
 .content-pane {
 	@extend .col-md-8;
 	.single &,
