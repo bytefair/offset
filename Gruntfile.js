@@ -80,8 +80,7 @@ module.exports = function (grunt) {
 		watch: { // automatic processing in development
 			sass: {
 				files: [
-					'assets/stylesheets/**/*.scss',
-					'bower_components/inuitcss/**/*.scss'
+					'assets/stylesheets/**/*.scss'
 				],
 				tasks: [ 'clean:css', 'sass', 'cssmin', 'version' ]
 			},
@@ -94,7 +93,7 @@ module.exports = function (grunt) {
 					livereload: false
 				},
 				files: [
-					'dist/**/*.min.*',
+					'dist/*.min.*',
 					'*.php',
 					'lib/*.php',
 					'templates/*.php'
