@@ -20,12 +20,12 @@ Instead of the heavy Bootstrap framework, I've chosen the light and far less opi
 2. NPM
 3. Ruby 1.9+
 
-## Special Directories
+## How to Use Offset
 
-/images - PNGs, JPEGs, and GIFs in placed in here will be minified
-/js - run through JSHint and Uglify
-
-## Understanding Functions
+1. You can clone or copy the offset folder into your themes folder. I've tried to make it compatible with child themes although I've not tested this.
+2. `grunt install` will build your theme
+3. I have `lib/scripts.php` set to `--assume-unchanged` using the Git command `update-index` because the changes are dependent on generated files. If you add something relevant to `lib/scripts.php`, be sure to set the file to `--no-assume-unchanged` and add the relevant changes, then re-set to `--assume-unchanged`
+4. `grunt dev` will watch your files in development. If you want LiveReload there is scaffolding in place but I have not enabled it by default.
 
 ## Recommended Plugins
 
