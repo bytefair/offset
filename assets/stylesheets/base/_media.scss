@@ -7,6 +7,17 @@
 	height: auto;
 }
 
+.thumbnail.wp-caption {
+	&.alignleft,
+	&.alignright {
+		display: inline-block;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
 iframe {
 	max-width: 100%;
 }

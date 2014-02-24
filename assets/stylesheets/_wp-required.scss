@@ -6,13 +6,17 @@
 .bypostauthor {}
 
 .alignright {
+	@extend .pull-right;
 }
 
 .alignleft {
+	@extend .pull-left;
 }
 
 .aligncenter {
+	@extend .center-block;
 }
 
 .screen-reader-text {
+	@extend .sr-only;
 }
