@@ -9,7 +9,6 @@
  * @license http://opensource.org/licenses/MIT
  * @since 0.1.0
  */
-?>
 
 get_template_part( 'templates/head' ); ?>
 
