@@ -1,8 +1,14 @@
 <?php
 /**
- * index.php is the most generic template available for WordPress. It will load
- * this file whenever there are no other options in the template heirarchy. This
- * and style.css are required for WordPress to load a theme.
+ * index.php
+ *
+ * index.php is the ultimate fallback in the template heirarchy. This will be
+ * run if no other templates are matched.
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
 get_template_part( 'templates/header' ); ?>

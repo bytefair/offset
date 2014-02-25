@@ -6,14 +6,24 @@
  * allows one sublevel of dropdown, so if you need complex menus, you'll want to
  * handle the menu controls on your own. Hell, if you're getting that complex
  * you are probably writing your own walkers anyway. -PG
+ *
+ * @package Offset\Navigation
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
 //* includes WP-Bootstrap Navwalker
-//* https://github.com/twittem/wp-bootstrap-navwalker
-//* managed by Git subtree
+//  https://github.com/twittem/wp-bootstrap-navwalker
+//  managed by Git subtree
+//  git subtree pull --prefix=lib/vendor/wp-bootstrap-navwalker wp-bootstrap-navwalker master --squash
 require_once( 'vendor/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php' );
 
-//* http://codex.wordpress.org/Function_Reference/register_nav_menus
+/**
+ * Registers nav menus so we can call them later
+ *
+ * @since 0.1.0
+ */
 function offset_menu_init()
 {
 	register_nav_menus( array(
@@ -22,7 +32,12 @@ function offset_menu_init()
 }
 add_action( 'init', 'offset_menu_init' );
 
-//* controls the blog/archive pagination
+
+/**
+ * Pagination for archives
+ *
+ * @since 0.1.0
+ */
 function offset_blog_pagination()
 {
 	global $wp_query;

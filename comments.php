@@ -1,6 +1,13 @@
 <?php
 /**
- * comments.php handles the comments area
+ * comments.php
+ *
+ * Comments display
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 ?>
 

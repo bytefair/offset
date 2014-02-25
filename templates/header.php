@@ -1,4 +1,15 @@
 <?php
+/**
+ * header.php
+ *
+ * Site header
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
+ */
+?>
 
 get_template_part( 'templates/head' ); ?>
 

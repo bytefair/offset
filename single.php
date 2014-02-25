@@ -1,6 +1,13 @@
 <?php
 /**
- * single.php shows up when you view any post by itself.
+ * single.php
+ *
+ * Template for any is_single() matches
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
 get_template_part( 'templates/header', get_post_format() ); ?>

@@ -3,8 +3,18 @@
  * init.php
  *
  * Initial setup. Things that must be fired upon the first action hook.
+ *
+ * @package Offset\Init
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
+/**
+ * Various theme setup actions that must be fired at after_setup_theme
+ *
+ * @since 0.1.0
+ */
 function offset_init()
 {
 	// translation
@@ -20,6 +30,5 @@ function offset_init()
 
 	// you can style the text inside TinyMCE and you should
 	// add_editor_style();
-
 }
 add_action( 'after_setup_theme', 'offset_init' );

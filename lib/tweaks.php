@@ -3,9 +3,20 @@
  * tweaks.php
  *
  * Contains various tweaks that change WP functionality
+ *
+ * @package Offset\Tweaks
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
-//* kills self-pings on interlinked articles
+/**
+ * Kills self-pinging trackbacks when you interlink articles
+ *
+ * @since 0.1.0
+ *
+ * @param array Trackback links
+ */
 function kill_self_ping( &$links )
 {
 	$home = home_url();
@@ -18,8 +29,14 @@ function kill_self_ping( &$links )
 add_action( 'pre_ping', 'kill_self_ping' );
 
 
-//* strips inline image sizes from display to ensure responsiveness
-//* http://speakinginbytes.com/2012/11/responsive-images-in-wordpress/
+/**
+ * strips inline image sizes from display to ensure responsiveness
+ *
+ * @since 0.1.0
+ *
+ * @param string Image elements
+ * @return string Modified image element with stripped dimensions
+ */
 function remove_thumbnail_dimensions( $html )
 {
 	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );

@@ -1,8 +1,13 @@
 <?php
 /**
- * page.php is the template for pages. I have kept it very simple so you can
- * design pages yourself. If you want to call the sidebar, you can find that
- * call in index.php
+ * page.php
+ *
+ * Template for pages
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
 get_template_part( 'templates/header' ); ?>

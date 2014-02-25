@@ -1,3 +1,15 @@
+<?php
+/**
+ * content-none.php
+ *
+ * Triggers when there is no content
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
+ */
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="article__header">
 		<h1 class="article__title entry-title"><?php _e('Sorry, nothing found.', 'offset' ); ?></h1>
