@@ -1,3 +1,6 @@
-.archive-pager ul {
-	@extend .pagination;
+.archive-pager{
+	text-align: center;
+	ul {
+		@extend .pagination;
+	}
 }
