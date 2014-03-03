@@ -36,6 +36,10 @@ Since this theme is meant to be compatible with Bedrock, you should be using [WP
 * Pods - <http://wordpress.org/plugins/pods/>
 * Slim Jetpack - <https://wordpress.org/plugins/slimjetpack/>
 
+## Updating WP-Bootstrap-Navwalker
+
+In case you fork the project, wp-bootstrap-navwalker is added as a Git subtree. To update the code independently, use the command `git subtree pull --prefix lib/vendor/wp-bootstrap-navwalker https://github.com/twittem/wp-bootstrap-navwalker.git master --squash`
+
 ## Credits
 
 Offset Printer Photo copyright [Philippe Teuwen](http://www.flickr.com/photos/doegox/1060145642)

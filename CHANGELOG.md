@@ -1,5 +1,17 @@
 # Changelog for Offset
 
+## v0.2.3 - 2014-03-03
+
+* Re-added Navwalker as a subtree due to problems including Offset in projects
+
+## v0.2.2 - 2014-02-27
+
+* Theme support for HTML5 galleries
+
+## v0.2.1 - 2014-02-27
+
+* Tried adding Navwalker as a submodule (turned out to be a bad idea)
+
 ## v0.2.0 - Second alpha - 2014-02-25
 
 * convert theme dev to Bootstrap due to Inuit bugs
