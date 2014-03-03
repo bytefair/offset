@@ -1,3 +1,0 @@
-[submodule "lib/vendor/wp-bootstrap-navwalker"]
-	path = lib/vendor/wp-bootstrap-navwalker
-	url = git@github.com:twittem/wp-bootstrap-navwalker.git
