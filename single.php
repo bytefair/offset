@@ -9,9 +9,7 @@
  * @license http://opensource.org/licenses/MIT
  * @since 0.1.0
  */
-
-get_template_part( 'templates/header', get_post_format() ); ?>
-
+?>
 
 <main class="content-pane single"><?php
 
@@ -21,7 +19,3 @@ get_template_part( 'templates/header', get_post_format() ); ?>
 		endwhile; ?>
 
 </main><?php
-
-
-get_template_part( 'templates/sidebar', get_post_format() );
-get_template_part( 'templates/footer', get_post_format() );

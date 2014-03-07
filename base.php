@@ -10,6 +10,7 @@
  * @since 0.3.0
  */
 
+
 get_template_part( 'templates/header' );
 include offset_template_path();
 if ( offset_display_sidebar() ) include offset_sidebar_path();

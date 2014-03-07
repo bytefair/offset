@@ -9,8 +9,7 @@
  * @license http://opensource.org/licenses/MIT
  * @since 0.1.0
  */
-
-get_template_part( 'templates/header' ); ?>
+?>
 
 
 <main class="content-pane 404-error">
@@ -25,8 +24,4 @@ get_template_part( 'templates/header' ); ?>
 
 		get_search_form(); ?>
 
-</main><?php
-
-
-get_template_part( 'templates/sidebar' );
-get_template_part( 'templates/footer' );
+</main>
