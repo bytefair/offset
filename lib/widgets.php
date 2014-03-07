@@ -26,3 +26,21 @@ function offset_register_sidebars()
 	) );
 }
 add_action( 'widgets_init', 'offset_register_sidebars' );
+
+
+/**
+ * Checks for banned templates, if in either array, skips entire sidebar
+ *
+ * @since 0.3.0
+ */
+function offset_display_sidebar()
+{
+	$offset_banned_templates = array(
+		'404.php',
+		'page.php'
+	);
+
+	if ( is_page_template( in_array( true, $offset_banned_templates ) ) ) return false;
+
+	return true;
+}
