@@ -1,6 +1,13 @@
 <?php
 /**
- * 404 Not Found template
+ * 404.php
+ *
+ * 404 WordPress page
+ *
+ * @package Offset\Templates
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
+ * @since 0.1.0
  */
 
 get_template_part( 'templates/header' ); ?>
