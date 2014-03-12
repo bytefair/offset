@@ -29,8 +29,9 @@ Instead of the heavy Bootstrap framework, I've chosen the light and far less opi
 
 ## Recommended Plugins
 
-Since this theme is meant to be compatible with Bedrock, you should be using [WPackagist](http://wpackagist.org) to manage your WP.org plugins through Composer. For that reason, I've not included any sort of activation script to auto-install plugins but there are a few I would suggest you consider.
+This theme is meant to be compatible with Offset Kickstart and Bedrock, so you should be using [WPackagist](http://wpackagist.org) to manage your WP.org plugins through Composer. For that reason, I've not included any sort of activation script to auto-install plugins but there are a few I would suggest you consider. Only Timber is required.
 
+* Timber **(Required)** - <http://wordpress.org/plugins/timber/>
 * Nice Search - <http://wordpress.org/plugins/nice-search/>
 * Advanced Custom Fields - <http://wordpress.org/plugins/advanced-custom-fields/>
 * Pods - <http://wordpress.org/plugins/pods/>
@@ -42,6 +43,6 @@ In case you fork the project, wp-bootstrap-navwalker is added as a Git subtree. 
 
 ## Credits
 
-Offset Printer Photo copyright [Philippe Teuwen](http://www.flickr.com/photos/doegox/1060145642)
+Offset Printer Photo copyright [Nadja Robot](https://secure.flickr.com/photos/nadja_robot/2490910807/)
 Thanks to [_s](http://underscores.me/) and [Bones](http://themble.com/bones/) for inspiration and a few code snippets.
-Thanks to [Roots Team](http://roots.io/) for Bedrock, which this package was refactored to work with and the brilliant Roots framework which was the also source of code and inspiration.
+Thanks to [Roots Team](http://roots.io/) for lots of code and understanding of a better way to manage a WordPress stack
