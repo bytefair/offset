@@ -31,7 +31,7 @@ Instead of the heavy Bootstrap framework, I've chosen the light and far less opi
 
 This theme is meant to be compatible with Offset Kickstart and Bedrock, so you should be using [WPackagist](http://wpackagist.org) to manage your WP.org plugins through Composer. For that reason, I've not included any sort of activation script to auto-install plugins but there are a few I would suggest you consider. Only Timber is required.
 
-* Timber **(Required)** - <http://wordpress.org/plugins/timber/>
+* Timber **(Required)** - <http://wordpress.org/plugins/timber-library/>
 * Nice Search - <http://wordpress.org/plugins/nice-search/>
 * Advanced Custom Fields - <http://wordpress.org/plugins/advanced-custom-fields/>
 * Pods - <http://wordpress.org/plugins/pods/>
