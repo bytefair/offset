@@ -1,5 +1,10 @@
 # Changelog for Offset
 
+## v0.3.0 - 2014-03-07
+
+* Adds theme wrapper
+* Establishes an array where you can specify all templates without a sidebar
+
 ## v0.2.3 - 2014-03-03
 
 * Re-added Navwalker as a subtree due to problems including Offset in projects
