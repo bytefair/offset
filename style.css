@@ -1,17 +1,13 @@
 /*!
-Theme Name: Offset
-Theme URI: https://github.com/bytefair/offset
+Theme Name: Coolfire Offset
+Theme URI: https://bitbucket.org/coolfirestudios/coolfire-offset
 Author: Paul E. Graham
 Author URI: http://bytefair.com/
 Description: Offset is intended to make theme development faster by preconfiguring all the hot new front-end tools that developers know and love!
-Version: 0.3.0
+Version: 0.5.0
 License: The MIT License (MIT)
 License URI: http://opensource.org/licenses/MIT
 Text Domain: offset
 Domain Path: /languages/
 Tags: boilerplate, framework, starter
-
-Offset is a theme that's meant for you to edit directly. It comes with plenty of front-end development hotness installed via Bower and Grunt and I eventually hope to make a Yo generator for it as well. If you want to change the development stack, consult the Gruntfile.
-
-Offset uses inspiration and code from Automattic's Underscores theme located at http://underscores.me
 */
