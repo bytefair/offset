@@ -5,3 +5,6 @@ dist
 node_modules
 .sublime-workspace
 assets/bootstrap-sass-official
+
+# Compiled files
+/css/*
