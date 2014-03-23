@@ -167,7 +167,7 @@
 		"inputAbbreviatedPath": "\/screenshot.png",
 		"outputAbbreviatedPath": "\/screenshot.png",
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/single.php": {
 		"fileType": 8192,
@@ -254,8 +254,8 @@
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/TODO.md",
 		"outputAbbreviatedPath": "\/TODO.html",
 		"outputPathIsSetByUser": 0
