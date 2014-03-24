@@ -24,9 +24,7 @@ get_template_part( 'templates/head' ); ?>
 				wp_nav_menu( array(
 					'theme_location'  => 'main-navigation',
 					'container'       => 'nav',
-					'container_class' => 'site__navigation',
-					'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-					'walker'          => new wp_bootstrap_navwalker()
+					'container_class' => 'site__navigation'
 				) );
 		endif; ?>
 	</div>
