@@ -1,5 +1,10 @@
 # Changelog for Coolfire Offset
 
+## 0.6.0 - Second beta - 2014-03-24
+
+- Stripped base wrapper and added those calls to templates
+- Stripped sidebar logic
+
 ## 0.5.0 - First beta - 2014-03-23 - Forked from Offset 0.3.0
 
 - Removes Grunt tasks that we won't use
