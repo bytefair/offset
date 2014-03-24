@@ -13,12 +13,6 @@
  * @since 0.1.0
  */
 
-//* includes WP-Bootstrap Navwalker
-//  https://github.com/twittem/wp-bootstrap-navwalker
-//  managed by Git subtree
-//  git subtree pull --prefix=lib/vendor/wp-bootstrap-navwalker wp-bootstrap-navwalker master --squash
-require_once( 'vendor/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php' );
-
 /**
  * Registers nav menus so we can call them later
  *
