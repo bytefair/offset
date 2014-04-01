@@ -13,7 +13,7 @@
 get_template_part('templates/header'); ?>
 
 
-<main class="content-pane 404-error">
+<main class="content-pane fourohfour">
 
 		<header class="article__header">
 			<h1 class="article__title"><?php _e( '404 Not Found', 'offset' ); ?></h1>
