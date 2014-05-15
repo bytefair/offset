@@ -30,5 +30,8 @@ function offset_init()
 
 	// you can style the text inside TinyMCE and you should
 	// add_editor_style();
+
+	// Admin bar is gross
+	add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 }
 add_action( 'after_setup_theme', 'offset_init' );

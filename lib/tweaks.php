@@ -44,14 +44,3 @@ function remove_thumbnail_dimensions( $html )
 }
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
-
-
-/**
- * removes the weird positioning of admin bar
- *
- * @since 0.6.3
- */
-function my_filter_head() {
-	remove_action('wp_head', '_admin_bar_bump_cb');
-}
-add_action('get_header', 'my_filter_head');
