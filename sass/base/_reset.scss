@@ -1,0 +1,21 @@
+// the increasingly tiny Normalize
+@import "../../vendor/normalize.css/normalize.css";
+
+// of course
+* {
+	@include box-sizing(border-box);
+}
+
+// all block elements
+address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, noscript, ol, output, p, pre, section, table, tfoot, ul, video {
+	margin: 0;
+	padding: 0;
+}
+// also normalize the font sizes
+h1, h2, h3, h4, h5, h6, p {
+	font: {
+		size: 1em;
+		weight: normal;
+	}
+	line-height: 1;
+}

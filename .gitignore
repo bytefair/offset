@@ -8,3 +8,6 @@ assets/bootstrap-sass-official
 
 # Compiled files
 /css/*
+
+# Bower
+/vendor/*
