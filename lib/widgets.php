@@ -2,6 +2,9 @@
 /**
  * widgets.php
  *
+ * Widgets mostly suck and you should probably do custom functionality in some
+ * other way more conducive to sanity.
+ *
  * @package Offset\Widgets
  * @author Paul Graham <paul@bytefair.com>
  * @license http://opensource.org/licenses/MIT
