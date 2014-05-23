@@ -17,7 +17,7 @@
 	<header class="article__header">
 		<a href="<?php the_permalink(); ?>"><h1 class="article__title entry-title"><?php the_title(); ?></h1></a>
 		<div class="article__meta byline author vcard">
-			<?php get_template_part( 'templates/article_meta', get_post_format() ); ?>
+			<?php get_template_part( 'templates/modules/article_meta', get_post_format() ); ?>
 		</div>
 	</header>
 

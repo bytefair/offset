@@ -21,8 +21,3 @@ locate_template('lib/widgets.php',    true, true);
 locate_template('lib/assets.php',     true, true);
 locate_template('lib/cleanup.php',    true, true);
 locate_template('lib/tweaks.php',     true, true);
-
-/**
- * Optional modules not called by default
- */
-//locate_template('lib/modules/pagination.php', true, true);
