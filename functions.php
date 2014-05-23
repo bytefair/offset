@@ -11,10 +11,18 @@
  * @since 0.1.0
  */
 
-locate_template( 'lib/define.php',     true, true );
-locate_template( 'lib/init.php',       true, true );
-locate_template( 'lib/navigation.php', true, true );
-locate_template( 'lib/widgets.php',    true, true );
-locate_template( 'lib/scripts.php',    true, true );
-locate_template( 'lib/cleanup.php',    true, true );
-locate_template( 'lib/tweaks.php',     true, true );
+/**
+ * Required WP Setup
+ */
+locate_template('lib/define.php',     true, true);
+locate_template('lib/init.php',       true, true);
+locate_template('lib/navigation.php', true, true);
+locate_template('lib/widgets.php',    true, true);
+locate_template('lib/scripts.php',    true, true);
+locate_template('lib/cleanup.php',    true, true);
+locate_template('lib/tweaks.php',     true, true);
+
+/**
+ * Optional modules not called by default
+ */
+//locate_template('modules/pagination.php', true, true);
