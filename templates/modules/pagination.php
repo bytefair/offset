@@ -2,6 +2,9 @@
 /**
  * Pagination for archives
  *
+ * @package Offset\Templates\Modules
+ * @author Paul Graham <paul@bytefair.com>
+ * @license http://opensource.org/licenses/MIT
  * @since 0.1.0
  */
 function offset_blog_pagination()

@@ -4,7 +4,7 @@
  *
  * Controls metadata display for article
  *
- * @package Offset\Templates
+ * @package Offset\Templates\Modules
  * @author Paul Graham <paul@bytefair.com>
  * @license http://opensource.org/licenses/MIT
  * @since 0.1.0
