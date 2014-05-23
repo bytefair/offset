@@ -23,7 +23,7 @@ function offset_init()
 	// http://codex.wordpress.org/Function_Reference/add_theme_support
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery' ) );
+	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 	// add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 	// add_theme_support( 'custom-background' );
 	// add_theme_support( 'custom-header' );
@@ -31,7 +31,7 @@ function offset_init()
 	// you can style the text inside TinyMCE and you should
 	// add_editor_style();
 
-	// Admin bar is gross
+	// This call removes the pixel bump from the WP toolbar
 	add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 }
 add_action( 'after_setup_theme', 'offset_init' );
