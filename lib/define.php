@@ -16,4 +16,5 @@
 if ( !isset( $content_width ) ) { $content_width = 736; }
 
 // number of words uses for excerpts
-define( 'EXCERPT_LENGTH', 40 );
+define('EXCERPT_LENGTH', 40);
+define('VERSION', '0.7.0');

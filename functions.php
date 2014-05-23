@@ -18,7 +18,7 @@ locate_template('lib/define.php',     true, true);
 locate_template('lib/init.php',       true, true);
 locate_template('lib/navigation.php', true, true);
 locate_template('lib/widgets.php',    true, true);
-locate_template('lib/scripts.php',    true, true);
+locate_template('lib/assets.php',     true, true);
 locate_template('lib/cleanup.php',    true, true);
 locate_template('lib/tweaks.php',     true, true);
 
