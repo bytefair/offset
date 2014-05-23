@@ -4,7 +4,7 @@
  *
  * Initial setup. Things that must be fired upon the first action hook.
  *
- * @package Offset\Init
+ * @package Offset\Supports
  * @author Paul Graham <paul@bytefair.com>
  * @license http://opensource.org/licenses/MIT
  * @since 0.1.0
