@@ -18,10 +18,10 @@ get_template_part('templates/header'); ?>
 
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();
-			get_template_part( 'templates/content', get_post_format() );
+			get_template_part('templates/panes/content', get_post_format());
 		endwhile;
 	else :
-		get_template_part( 'templates/content', 'none' );
+		get_template_part('templates/panes/content', 'none');
 	endif; ?>
 
 </main><?php

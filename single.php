@@ -17,7 +17,7 @@ get_template_part('templates/header'); ?>
 
 		while ( have_posts() ) :
 			the_post();
-			get_template_part( 'templates/content-single', get_post_format() );
+			get_template_part( 'templates/panes/content-single', get_post_format() );
 		endwhile; ?>
 
 </main><?php
