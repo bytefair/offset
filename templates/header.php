@@ -10,7 +10,7 @@
  * @since 0.1.0
  */
 
-get_template_part( 'templates/head' ); ?>
+locate_template('templates/head', true, true); ?>
 
 
 <body <?php body_class(); ?>>
@@ -19,13 +19,13 @@ get_template_part( 'templates/head' ); ?>
 <div class="header__wrapper">
 <header role="banner" class="site__header">
 	<div class="site__header__content">
-		<a href="<?php echo home_url( '/' ); ?>"><h1><?php bloginfo('name'); ?></h1></a><?php
+		<a href="<?php echo home_url('/'); ?>"><h1><?php bloginfo('name'); ?></h1></a><?php
 		if ( has_nav_menu( 'main-navigation' ) ) :
-				wp_nav_menu( array(
+				wp_nav_menu(array(
 					'theme_location'  => 'main-navigation',
 					'container'       => 'nav',
 					'container_class' => 'site__navigation'
-				) );
+				));
 		endif; ?>
 	</div>
 </header>

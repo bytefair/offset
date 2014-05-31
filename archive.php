@@ -17,7 +17,7 @@ locate_template('templates/header', true, true); ?>
 
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();
-			get_template_part('templates/panes/content', get_post_format());
+			get_template_part('templates/panes/content', 'archive');
 		endwhile;
 	else :
 		get_template_part('templates/panes/content', 'none');

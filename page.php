@@ -19,7 +19,7 @@ locate_template('templates/header', true, true); ?>
 		the_post();
 		the_content();
 	endwhile;
-	wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
+	wp_link_pages(array( 'before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
 
 </main><?php
 

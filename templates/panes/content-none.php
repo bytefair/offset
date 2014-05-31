@@ -20,16 +20,16 @@
 
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Click here</a>.', 'offset' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf(__('Ready to publish your first post? <a href="%1$s">Click here</a>.', 'offset'), esc_url(admin_url('post-new.php'))); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry but nothing was found that matches your search. Plese try again with different search terms.', 'offset' ); ?></p>
+			<p><?php _e('Sorry but nothing was found that matches your search. Plese try again with different search terms.', 'offset'); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'We cannot find what you are trying to access. Perhaps you can find it by searching.', 'offset' ); ?></p>
+			<p><?php _e('We cannot find what you are trying to access. Perhaps you can find it by searching.', 'offset'); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
