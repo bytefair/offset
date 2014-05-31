@@ -10,7 +10,7 @@
  * @since 0.1.0
  */
 
-get_template_part('templates/header'); ?>
+locate_template('templates/header', true, true); ?>
 
 
 <main class="content-pane fourohfour">
@@ -28,4 +28,4 @@ get_template_part('templates/header'); ?>
 </main><?php
 
 
-get_template_part('templates/footer');
+locate_template('templates/footer', true, true);
