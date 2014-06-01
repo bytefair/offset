@@ -10,7 +10,7 @@
  * @since 0.1.0
  */
 
-locate_template('templates/head', true, true); ?>
+locate_template('templates/head.php', true, true); ?>
 
 
 <body <?php body_class(); ?>>

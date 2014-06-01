@@ -10,7 +10,7 @@
  * @since 0.7.0
  */
 
-locate_template('templates/header', true, true); ?>
+locate_template('templates/header.php', true, true); ?>
 
 
 <main class="content-pane hfeed"><?php
@@ -26,5 +26,5 @@ locate_template('templates/header', true, true); ?>
 </main><?php
 
 
-locate_template('templates/sidebar', true, true);
-locate_template('templates/footer', true, true);
+locate_template('templates/sidebar.php', true, true);
+locate_template('templates/footer.php', true, true);
