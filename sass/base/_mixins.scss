@@ -1,0 +1,5 @@
+// clearfix extend
+%cf {
+	@include clearfix();
+}
+

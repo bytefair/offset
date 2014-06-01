@@ -1,5 +1,6 @@
 // Master styles file, declare your styles in subfiles
 @import "bourbon";
 
+@import "base/mixins";
 @import "base/reset";
 @import "base/wysiwyg";
