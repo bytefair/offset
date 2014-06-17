@@ -2,7 +2,7 @@
 @import "../../vendor/normalize.css/normalize.css";
 
 // of course
-* {
+*, *:before, *:after {
 	@include box-sizing(border-box);
 }
 
