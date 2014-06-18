@@ -340,7 +340,7 @@
 		},
 	"\/vendor\/normalize.css\/normalize.css": {
 		"fileType": 16,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/vendor\/normalize.css\/normalize.css",
 		"outputAbbreviatedPath": "No Output Path",
