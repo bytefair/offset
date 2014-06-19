@@ -1,5 +1,14 @@
 # Changelog for Coolfire Offset
 
+## 0.7.0 - Third beta
+
+- Introduces Bower components via CodeKit
+- Sublime Text project files
+- Simplifies and clarifies project structure
+- HTML5 captions
+- New Sass mixins for breakpoint, clearfix
+- CSS resets
+
 ## 0.6.0 - Second beta - 2014-03-24
 
 - Stripped base wrapper and added those calls to templates
