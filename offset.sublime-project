@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				".sass-cache",
+				"xml",
+				".codekit-cache"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}
