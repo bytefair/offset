@@ -8,6 +8,7 @@
 - HTML5 captions
 - New Sass mixins for breakpoint, clearfix
 - CSS resets
+- Formats scaffolding for TinyMCE
 
 ## 0.6.0 - Second beta - 2014-03-24
 
