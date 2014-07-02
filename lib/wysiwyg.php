@@ -17,7 +17,8 @@
  * @since 0.7.0
  */
 if ( ! function_exists( 'wpex_style_select' ) ) {
-	function wpex_style_select( $buttons ) {
+	function wpex_style_select( $buttons )
+	{
 		array_push( $buttons, 'styleselect' );
 		return $buttons;
 	}
@@ -30,7 +31,8 @@ add_filter( 'mce_buttons', 'wpex_style_select' );
  * @since  0.7.0
  */
 if ( ! function_exists( 'wpex_styles_dropdown' ) ) {
-	function wpex_styles_dropdown( $settings ) {
+	function wpex_styles_dropdown( $settings )
+	{
 
 		// Create array of new styles
 		// $new_styles = array(
