@@ -23,4 +23,4 @@ function is_tree($pid)
 		return true;
 	else
 		return false;
-};
+}
