@@ -29,7 +29,7 @@ function offset_init()
 	// add_theme_support( 'custom-header' );
 
 	// you can style the text inside TinyMCE and you should
-	// add_editor_style();
+	add_editor_style( '/css/editor-styles.css' );
 
 	// This call removes the pixel bump from the WP toolbar
 	add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );

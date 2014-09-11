@@ -21,4 +21,4 @@ locate_template('lib/widgets.php',    true, true); // Set up sidebars/widgets
 locate_template('lib/assets.php',     true, true); // Queue JS and CSS
 locate_template('lib/cleanup.php',    true, true); // Cleanups and tweaks to WP
 locate_template('lib/wysiwyg.php',    true, true); // WYSIWYG customizations
-locate_template('lib/functions.php'), true, true); // Custom functions
+locate_template('lib/functions.php',  true, true); // Custom functions
