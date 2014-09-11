@@ -1,27 +1,58 @@
 // the increasingly tiny Normalize
 @import "../vendor/normalize.css/normalize";
 
-// of course
+// always border-box
 *, *:before, *:after {
-	@include box-sizing(border-box);
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 // all block elements
 address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, noscript, ol, output, p, pre, section, table, tfoot, ul, video {
 	margin: 0;
 	padding: 0;
+	text-rendering: optimizeLegibility;
 }
-// also normalize the font sizes
-h1, h2, h3, h4, h5, h6, p {
-	font: {
-		size: 1em;
-		weight: normal;
-	}
-	line-height: 1;
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	font-weight: normal;
 }
 
-// the images should be restricted to their container and responsive unless otherwise specified
+// more sane presets for lists
+ul, ol {
+	padding-left: 1em;
+}
+dd {
+	margin-left: 1em;
+}
+figure {
+	margin: 0;
+}
 img {
 	max-width: 100%;
-	height: auto;
+}
+pre code {
+	tab-size: 4;
+}
+
+// forms reset
+fieldset {
+	margin: 10px;
+	padding: 10px;
+	legend {
+		font-weight: bold;
+	}
+	ul {
+		padding-left: 10px;
+	}
+	li {
+		list-style-type: none;
+	}
+}
+label {
+	display: block;
+}
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], input[type="range"], textarea, select {
+	min-width: 250px;
 }
