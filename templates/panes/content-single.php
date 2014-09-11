@@ -17,7 +17,7 @@
 	<header class="article__header">
 		<h1 class="article__title entry-title"><?php the_title(); ?></h1>
 		<div class="article__meta byline author vcard">
-			<?php get_template_part('templates/modules/article_meta', get_post_format()); ?>
+			<!-- metadata goes here -->
 		</div>
 	</header>
 

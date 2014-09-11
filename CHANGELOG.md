@@ -1,6 +1,6 @@
 # Changelog for Coolfire Offset
 
-## 0.7.0 - Third beta
+## 0.7.0 - Third beta - 2014-9-11
 
 - Introduces Bower components via CodeKit
 - Sublime Text project files
@@ -9,6 +9,8 @@
 - New Sass mixins for breakpoint, clearfix
 - CSS resets
 - Formats scaffolding for TinyMCE
+- Removes default meta
+- Removes old pagination
 
 ## 0.6.0 - Second beta - 2014-03-24
 
