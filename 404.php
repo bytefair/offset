@@ -13,7 +13,7 @@
 locate_template('templates/header', true, true); ?>
 
 
-<main class="content-pane fourohfour">
+<main>
 
 		<header class="article__header">
 			<h1 class="article__title"><?php _e('404 Not Found', 'offset'); ?></h1>

@@ -11,6 +11,8 @@
 - Formats scaffolding for TinyMCE
 - Removes default meta
 - Removes old pagination
+- More robust reset
+- Removes classes from main element
 
 ## 0.6.0 - Second beta - 2014-03-24
 

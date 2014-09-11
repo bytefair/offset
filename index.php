@@ -14,7 +14,7 @@
 locate_template('templates/header.php', true, true); ?>
 
 
-<main class="content-pane hfeed"><?php
+<main><?php
 
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();

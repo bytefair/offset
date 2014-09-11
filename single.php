@@ -13,7 +13,7 @@
 locate_template('templates/header.php', true, true); ?>
 
 
-<main class="content-pane single"><?php
+<main><?php
 
 		while ( have_posts() ) :
 			the_post();
