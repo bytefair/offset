@@ -21,7 +21,9 @@ locate_template('templates/header.php', true, true); ?>
 		endwhile;
 	else :
 		get_template_part('templates/panes/content', 'none');
-	endif; ?>
+	endif;
+
+	posts_nav_link(); ?>
 
 </main><?php
 
