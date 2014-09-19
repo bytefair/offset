@@ -18,8 +18,7 @@ locate_template('templates/header.php', true, true); ?>
 	while ( have_posts() ) :
 		the_post();
 		the_content();
-	endwhile;
-	wp_link_pages(array( 'before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+	endwhile; ?>
 
 </main><?php
 
