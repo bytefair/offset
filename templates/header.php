@@ -19,14 +19,7 @@ locate_template('templates/head.php', true, true); ?>
 <div class="header__wrapper">
 <header role="banner" class="site__header">
 	<div class="site__header__content">
-		<a href="<?php echo home_url('/'); ?>"><h1><?php bloginfo('name'); ?></h1></a><?php
-		if ( has_nav_menu( 'main-navigation' ) ) :
-				wp_nav_menu(array(
-					'theme_location'  => 'main-navigation',
-					'container'       => 'nav',
-					'container_class' => 'site__navigation'
-				));
-		endif; ?>
+		<a href="<?php echo home_url('/'); ?>"><h1><?php bloginfo('name'); ?></h1></a>
 	</div>
 </header>
 </div>

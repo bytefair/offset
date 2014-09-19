@@ -21,7 +21,7 @@
 function offset_menu_init()
 {
 	register_nav_menus( array(
-		'main-navigation'   => __( 'Main Navigation', 'offset' )
+		//'main-navigation'   => __( 'Main Navigation', 'offset' )
 	) );
 }
 add_action( 'init', 'offset_menu_init' );
