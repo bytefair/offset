@@ -1,12 +1,12 @@
 {
-  "name": "coolfire-offset",
-  "version": "0.7.0",
+  "name": "offset",
+  "version": "0.8.0",
   "authors": [
-    "Paul Graham <pgraham@coolfire.com>"
+    "Paul Graham <paul@bytefair.com>"
   ],
-  "description": "A theme for Coolfire",
+  "description": "A starter theme",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/coolfirestudios/coolfire-offset",
+  "homepage": "https://github.com/bytefair/offset",
   "private": true,
   "ignore": [
     "**/.*",

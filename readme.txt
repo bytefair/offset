@@ -1,6 +1,6 @@
-# Coolfire Offset
+# Offset
 
-Coolfire Offset is a WordPress starter kit customized for Coolfire Studios.
+Offset is a WordPress starter kit.
 
 ## Credits
 

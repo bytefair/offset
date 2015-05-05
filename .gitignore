@@ -3,7 +3,7 @@
 *.log
 dist
 node_modules
-.sublime-workspace
+*.sublime-workspace
 assets/bootstrap-sass-official
 
 # Compiled files

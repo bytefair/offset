@@ -1,4 +1,13 @@
-# Changelog for Coolfire Offset
+# Changelog for Offset
+
+## 0.8.0 - 2015-05-5
+- removed Coolfire references
+- added IMAGE_EDIT_OVERWRITE boolean for cleaner media
+
+## 0.7.1 - 2014-9-19
+- removes menus by default
+- removes wp_link_pages reference
+- generic pagers
 
 ## 0.7.0 - Third beta - 2014-9-11
 
