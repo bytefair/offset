@@ -18,3 +18,4 @@ if ( !isset( $content_width ) ) { $content_width = 736; }
 // number of words uses for excerpts
 define('EXCERPT_LENGTH', 40);
 define('VERSION', '0.8.0');
+define( 'IMAGE_EDIT_OVERWRITE', true );
