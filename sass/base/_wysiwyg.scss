@@ -1,6 +1,7 @@
 /* =WordPress Core
 -------------------------------------------------------------- */
-.alignnone {
+.alignnone,
+a img.alignnone {
 }
 
 .aligncenter,
@@ -9,26 +10,12 @@ div.aligncenter {
 	margin: 0 auto;
 }
 
-.alignright {
+.alignright,
+a img.alignright {
 	float:right;
 }
 
-.alignleft {
-	float: left;
-}
-
-.aligncenter {
-	display: block;
-	margin: 0 auto;
-}
-
-a img.alignright {
-	float: right;
-}
-
-a img.alignnone {
-}
-
+.alignleft,
 a img.alignleft {
 	float: left;
 }
