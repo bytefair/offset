@@ -1,15 +1,20 @@
 # Changelog for Offset
 
-## 0.8.0 - 2015-05-5
+## 1.0.0 - 2015-05-05
+- switched to Gulp from CodeKit
+- Normalize + Sanitize as reset
+- kills some dumb WP header stuff
+
+## 0.8.0 - 2015-05-05
 - removed Coolfire references
 - added IMAGE_EDIT_OVERWRITE boolean for cleaner media
 
-## 0.7.1 - 2014-9-19
+## 0.7.1 - 2014-09-19
 - removes menus by default
 - removes wp_link_pages reference
 - generic pagers
 
-## 0.7.0 - Third beta - 2014-9-11
+## 0.7.0 - Third beta - 2014-09-11
 
 - Introduces Bower components via CodeKit
 - Sublime Text project files
