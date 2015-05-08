@@ -6,6 +6,7 @@
 - kills some dumb WP header stuff
 - removes Sublime project for distro
 - turn on title-tag
+- added HTML5 output for widgets
 
 ## 0.8.0 - 2015-05-05
 - removed Coolfire references
