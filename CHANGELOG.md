@@ -5,6 +5,7 @@
 - Normalize + Sanitize as reset
 - kills some dumb WP header stuff
 - removes Sublime project for distro
+- turn on title-tag
 
 ## 0.8.0 - 2015-05-05
 - removed Coolfire references
