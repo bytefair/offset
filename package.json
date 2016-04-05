@@ -1,20 +1,18 @@
 {
   "name": "offset",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "a starter theme for WP",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bytefair/offset.git"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "Paul Graham <paul@bytefair.com>",
+  "license": "GPL-v2.0+",
   "bugs": {
     "url": "https://github.com/bytefair/offset/issues"
   },
   "homepage": "https://github.com/bytefair/offset#readme",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-sass": "^1.3.3",
-    "gulp-sourcemaps": "^1.5.2"
+
   }
 }
