@@ -3,6 +3,7 @@
 ## 2.0.0 - 2016-05-05 - Major Refactor
 - switch from Gulp to NPM scripts for simpler process
 - uses Browserify and Babel to manage scripting
+- complete refactor of JS and styles
 
 ## 1.0.0 - 2015-05-05 - First Official Release
 - switched to Gulp from CodeKit

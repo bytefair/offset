@@ -1,15 +1,4 @@
 .sass-cache
 .tmp
 *.log
-dist
 node_modules
-*.sublime-workspace
-*.sublime-project
-assets/bootstrap-sass-official
-
-# Compiled files
-/css/*
-/javascript/min/*
-
-# Bower
-/vendor/*
