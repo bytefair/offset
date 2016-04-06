@@ -7,12 +7,49 @@
     "url": "git+https://github.com/bytefair/offset.git"
   },
   "author": "Paul Graham <paul@bytefair.com>",
-  "license": "GPL-v2.0+",
+  "license": "GPL-v3.0+",
   "bugs": {
     "url": "https://github.com/bytefair/offset/issues"
   },
   "homepage": "https://github.com/bytefair/offset#readme",
   "devDependencies": {
-
+    "autoprefixer": "latest",
+    "babel-preset-es2015": "latest",
+    "babelify": "latest",
+    "browser-sync": "latest",
+    "browserify": "latest",
+    "cssnano": "latest",
+    "node-sass": "latest",
+    "nodemon": "latest",
+    "normalize.css": "~4",
+    "parallelshell": "latest",
+    "postcss-cli": "latest",
+    "snazzy": "latest",
+    "standard": "latest",
+    "uglify-js": "latest",
+    "watchify": "latest"
+  },
+  "scripts": {
+    "js:compile": "browserify scripts/entry.js --debug --verbose --transform [ babelify --presets [ es2015 ] ] --outfile scripts/bundle.js",
+    "js:lint": "standard --verbose | snazzy",
+    "js:min": "uglifyjs scripts/bundle.js --compress --mangle --output scripts/bundle.js",
+    "styles:compile": "node-sass --source-map-embed --output-style=nested styles/entry.scss styles/bundle.css",
+    "styles:prefix": "postcss --use autoprefixer --replace styles/bundle.css",
+    "styles:min": "postcss --use cssnano --replace styles/bundle.css",
+    "serve": "browser-sync start --proxy 'coolfire' --files '**/*'",
+    "watch:js": "watchify scripts/entry.js --debug --verbose --transform [ babelify --presets [ es2015 ] ] --outfile scripts/bundle.js",
+    "watch:styles": "nodemon --ext scss --exec 'npm run styles:compile && npm run styles:prefix'",
+    "watch": "parallelshell 'npm run watch:js' 'npm run watch:styles' 'npm run serve'",
+    "build:dev": "npm-run-all --parallel js:compile styles:compile",
+    "build:prod": "npm-run-all --parallel js:compile styles:compile --sequential styles:prefix styles:min js:min",
+    "deploy": "git push prod master"
+  },
+  "standard": {
+    "ignore": [
+      "scripts/bundle.js",
+      "node_modules"
+    ],
+    "parser": "babel-eslint",
+    "globals": []
   }
 }
