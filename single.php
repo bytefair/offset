@@ -10,18 +10,12 @@
  * @since 0.1.0
  */
 
-locate_template('templates/header.php', true, true); ?>
-
-
-<main><?php
+get_header();
 
 		while ( have_posts() ) :
 			the_post();
-			get_template_part('templates/panes/content-single', get_post_format());
-		endwhile; ?>
+			get_template_part('components/content-single', get_post_format());
+		endwhile;
 
-</main><?php
-
-
-locate_template('templates/sidebar.php', true, true);
-locate_template('templates/footer.php', true, true);
+get_sidebar();
+get_footer();

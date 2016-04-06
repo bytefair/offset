@@ -10,17 +10,11 @@
  * @since 0.1.0
  */
 
-locate_template('templates/header.php', true, true); ?>
-
-
-<main><?php
+get_header();
 
 	while ( have_posts() ) :
 		the_post();
 		the_content();
-	endwhile; ?>
+	endwhile;
 
-</main><?php
-
-
-locate_template('templates/footer.php', true, true);
+get_footer();

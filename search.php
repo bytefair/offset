@@ -10,21 +10,15 @@
  * @since 0.7.0
  */
 
-locate_template('templates/header.php', true, true); ?>
-
-
-<main><?php
+get_header();
 
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();
-			get_template_part('templates/panes/content', 'archive');
+			get_template_part('components/content', 'archive');
 		endwhile;
 	else :
-		get_template_part('templates/panes/content', 'none');
-	endif; ?>
+		get_template_part('components/content', 'none');
+	endif;
 
-</main><?php
-
-
-locate_template('templates/sidebar.php', true, true);
-locate_template('templates/footer.php', true, true);
+get_sidebar();
+get_footer();
