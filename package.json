@@ -22,13 +22,12 @@
     "normalize.css": "~4",
     "parallelshell": "latest",
     "postcss-cli": "latest",
-    "postcss-cssnext": "^2.5.2",
-    "postcss-sassy-mixins": "^2.0.0",
-    "postcss-scss": "^0.1.7",
+    "postcss-cssnext": "latest",
+    "postcss-sassy-mixins": "latest",
     "snazzy": "latest",
     "standard": "latest",
-    "stylelint": "^5.4.0",
-    "stylelint-config-standard": "^5.0.0",
+    "stylelint": "latest",
+    "stylelint-config-standard": "latest",
     "uglify-js": "latest",
     "watchify": "latest"
   },
@@ -36,8 +35,9 @@
     "js:compile": "browserify scripts/entry.js --debug --verbose --transform [ babelify --presets [ es2015 ] ] --outfile scripts/bundle.js",
     "js:lint": "standard --verbose | snazzy",
     "js:min": "uglifyjs scripts/bundle.js --compress --mangle --output scripts/bundle.js",
-    "styles:min": "postcss --use cssnano --replace styles/bundle.css",
     "styles:compile": "postcss --use postcss-import --use postcss-cssnext --use postcss-sassy-mixins --config postcss.json --output styles/bundle.css styles/entry.css",
+    "styles:lint": "stylelint styles/**/*.css",
+    "styles:min": "postcss --use cssnano --replace styles/bundle.css",
     "serve": "browser-sync start --proxy 'hlkpress' --files '**/*'",
     "watch:js": "watchify scripts/entry.js --debug --verbose --transform [ babelify --presets [ es2015 ] ] --outfile scripts/bundle.js",
     "watch:styles": "nodemon --watch styles --ext css --exec 'npm run styles:compile'",
@@ -53,5 +53,8 @@
     ],
     "parser": "babel-eslint",
     "globals": []
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
   }
 }
