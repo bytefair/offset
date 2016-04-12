@@ -11,13 +11,13 @@
  */
 ?>
 
-	</main>
-	
-	<footer role="contentinfo" class="site__footer">
-		<div class="site__footer__content">
-		</div>
-	</footer>
+  </main>
 
-	<?php wp_footer(); ?>
+  <footer role="contentinfo" class="site__footer">
+    <div class="site__footer__content">
+    </div>
+  </footer>
+
+  <?php wp_footer(); ?>
 </body>
 </html>

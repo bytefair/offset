@@ -18,9 +18,9 @@
  */
 function is_tree($pid)
 {
-	global $post;
-	if( is_page() && ($post->post_parent==$pid || is_page($pid)) )
-		return true;
-	else
-		return false;
+  global $post;
+  if( is_page() && ($post->post_parent==$pid || is_page($pid)) )
+    return true;
+  else
+    return false;
 }

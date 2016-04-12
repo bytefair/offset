@@ -12,10 +12,10 @@
 
 get_header();
 
-		while ( have_posts() ) :
-			the_post();
-			get_template_part('components/content-single', get_post_format());
-		endwhile;
+    while ( have_posts() ) :
+      the_post();
+      get_template_part('components/content-single', get_post_format());
+    endwhile;
 
 get_sidebar();
 get_footer();

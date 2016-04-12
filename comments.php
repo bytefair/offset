@@ -12,13 +12,13 @@
 ?>
 
 <aside class="comments-section">
-	<ol class="comments-list"><?php
+  <ol class="comments-list"><?php
 
-		wp_list_comments();
+    wp_list_comments();
 
-		paginate_comments_links();
+    paginate_comments_links();
 
-		comment_form(); ?>
+    comment_form(); ?>
 
-	</ol>
+  </ol>
 </aside>

@@ -19,13 +19,13 @@
  */
 function offset_head_scrubber()
 {
-	remove_action( 'wp_head', 'feed_links', 2 );
-	remove_action( 'wp_head', 'feed_links_extra', 3 );
-	remove_action( 'wp_head', 'rsd_link' );
-	remove_action( 'wp_head', 'wlwmanifest_link' );
-	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-	remove_action( 'wp_head', 'wp_generator' );
-	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+  remove_action( 'wp_head', 'feed_links', 2 );
+  remove_action( 'wp_head', 'feed_links_extra', 3 );
+  remove_action( 'wp_head', 'rsd_link' );
+  remove_action( 'wp_head', 'wlwmanifest_link' );
+  remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+  remove_action( 'wp_head', 'wp_generator' );
+  remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 }
 add_action( 'init', 'offset_head_scrubber' );
 
@@ -49,10 +49,10 @@ add_filter( 'the_generator', '__return_false' );
  */
 function offset_clean_style_tag( $input )
 {
-	preg_match_all( "!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches );
-	// Only display media if it is meaningful
-	$media = $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
-	return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
+  preg_match_all( "!<link rel='stylesheet'\s?(id='[^']+')?\s+href='(.*)' type='text/css' media='(.*)' />!", $input, $matches );
+  // Only display media if it is meaningful
+  $media = $matches[3][0] !== '' && $matches[3][0] !== 'all' ? ' media="' . $matches[3][0] . '"' : '';
+  return '<link rel="stylesheet" href="' . $matches[2][0] . '"' . $media . '>' . "\n";
 }
 add_filter( 'style_loader_tag', 'offset_clean_style_tag' );
 
@@ -68,7 +68,7 @@ add_filter( 'style_loader_tag', 'offset_clean_style_tag' );
  */
 function offset_remove_self_closing_tags( $input )
 {
-	return str_replace(' />', '>', $input);
+  return str_replace(' />', '>', $input);
 }
 add_filter( 'get_avatar',          'offset_remove_self_closing_tags' ); // <img />
 add_filter( 'comment_id_fields',   'offset_remove_self_closing_tags' ); // <input />
@@ -86,7 +86,7 @@ add_filter( 'post_thumbnail_html', 'offset_remove_self_closing_tags' ); // <img 
  */
 function offset_excerpt_length()
 {
-	return EXCERPT_LENGTH;
+  return EXCERPT_LENGTH;
 }
 add_filter( 'excerpt_length', 'offset_excerpt_length' );
 
@@ -100,18 +100,18 @@ add_filter( 'excerpt_length', 'offset_excerpt_length' );
  */
 function offset_rel_canonical()
 {
-	global $wp_the_query;
+  global $wp_the_query;
 
-	if ( !is_singular() ) {
-		return;
-	}
+  if ( !is_singular() ) {
+    return;
+  }
 
-	if ( !$id = $wp_the_query->get_queried_object_id() ) {
-		return;
-	}
+  if ( !$id = $wp_the_query->get_queried_object_id() ) {
+    return;
+  }
 
-	$link = get_permalink($id);
-	echo "\t<link rel=\"canonical\" href=\"$link\">\n";
+  $link = get_permalink($id);
+  echo "\t<link rel=\"canonical\" href=\"$link\">\n";
 }
 add_action( 'init', 'offset_rel_canonical' );
 
@@ -127,20 +127,20 @@ add_action( 'init', 'offset_rel_canonical' );
  */
 function offset_body_class( $classes )
 {
-	// Add post/page slug
-	if (is_single() || is_page() && !is_front_page()) {
-		$classes[] = basename( get_permalink() );
-	}
+  // Add post/page slug
+  if (is_single() || is_page() && !is_front_page()) {
+    $classes[] = basename( get_permalink() );
+  }
 
-	// Remove unnecessary classes
-	$home_id_class = 'page-id-' . get_option( 'page_on_front' );
-	$remove_classes = array(
-		'page-template-default',
-		$home_id_class
-	);
-	$classes = array_diff( $classes, $remove_classes );
+  // Remove unnecessary classes
+  $home_id_class = 'page-id-' . get_option( 'page_on_front' );
+  $remove_classes = array(
+    'page-template-default',
+    $home_id_class
+  );
+  $classes = array_diff( $classes, $remove_classes );
 
-	return $classes;
+  return $classes;
 }
 add_filter( 'body_class', 'offset_body_class' );
 
@@ -154,12 +154,12 @@ add_filter( 'body_class', 'offset_body_class' );
  */
 function kill_self_ping( &$links )
 {
-	$home = home_url();
-	foreach ( $links as $l ) {
-		if ( 0 === strpos( $link, $home ) ) {
-			unset( $links[$l] );
-		}
-	}
+  $home = home_url();
+  foreach ( $links as $l ) {
+    if ( 0 === strpos( $link, $home ) ) {
+      unset( $links[$l] );
+    }
+  }
 }
 add_action( 'pre_ping', 'kill_self_ping' );
 
@@ -174,8 +174,8 @@ add_action( 'pre_ping', 'kill_self_ping' );
  */
 function remove_thumbnail_dimensions( $html )
 {
-	$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-	return $html;
+  $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+  return $html;
 }
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
