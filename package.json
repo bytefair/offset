@@ -23,6 +23,7 @@
     "parallelshell": "latest",
     "postcss-cli": "latest",
     "postcss-cssnext": "latest",
+    "postcss-import": "latest",
     "postcss-sassy-mixins": "latest",
     "snazzy": "latest",
     "standard": "latest",
