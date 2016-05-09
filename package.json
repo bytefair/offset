@@ -1,6 +1,6 @@
 {
   "name": "offset",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "a starter theme for WP",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "styles:min": "postcss --use cssnano --replace styles/bundle.css",
     "serve": "browser-sync start --proxy 'hlkpress' --files '**/*'",
     "watch:js": "watchify scripts/entry.js --debug --verbose --transform [ babelify --presets [ es2015 ] ] --outfile scripts/bundle.js",
-    "watch:styles": "nodemon --watch styles --ext css --exec 'npm run styles:compile'",
+    "watch:styles": "nodemon --watch styles --ext css --ignore styles/bundle.css --exec 'npm run styles:compile'",
     "watch": "parallelshell 'npm run watch:js' 'npm run watch:styles' 'npm run serve'",
     "build:dev": "npm-run-all --parallel js:compile styles:compile",
     "build:prod": "npm-run-all --parallel js:compile styles:compile --sequential styles:min js:min",

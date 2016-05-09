@@ -1,6 +1,9 @@
 # Changelog for Offset
 
-## 2.0.0 - 2016-05-05 - Major Refactor
+## 2.1.0 - 2016-05-09
+- PostCSS instead of Sass
+
+## 2.0.0 - 2016-04-05 - Major Refactor
 - switch from Gulp to NPM scripts for simpler process
 - uses Browserify and Babel to manage scripting
 - complete refactor of JS and styles
