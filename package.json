@@ -26,6 +26,7 @@
     "postcss-em-media-query": "latest",
     "postcss-import": "latest",
     "postcss-pxtorem": "latest",
+    "sanitize.css": "latest",
     "snazzy": "latest",
     "standard": "latest",
     "stylelint": "latest",
@@ -46,7 +47,7 @@
     "watch": "parallelshell 'npm run watch:js' 'npm run watch:styles' 'npm run serve'",
     "build:dev": "npm-run-all --parallel js:compile styles:compile",
     "build:prod": "npm-run-all --parallel js:compile styles:compile --sequential styles:min js:min",
-    "deploy": "git push prod master"
+    "start": "npm run watch"
   },
   "standard": {
     "ignore": [
